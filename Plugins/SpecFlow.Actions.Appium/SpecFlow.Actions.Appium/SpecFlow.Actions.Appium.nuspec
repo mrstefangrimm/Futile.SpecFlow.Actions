@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
   <metadata>
-    <id>SpecFlow.Actions.Appium</id>
+    <id>Futile.SpecFlow.Actions.Appium</id>
     <version>$version$</version>
     <authors>$author$</authors>
     <owners>$owner$</owners>
-    <description>SpecFlow.Actions.Appium</description>
+    <description>Fork of SpecFlow.Actions.Appium</description>
     <dependencies>
       <group targetFramework=".NETFramework4.7.1">
         <dependency id="SpecFlow.Actions.Configuration" version="$version$"/>

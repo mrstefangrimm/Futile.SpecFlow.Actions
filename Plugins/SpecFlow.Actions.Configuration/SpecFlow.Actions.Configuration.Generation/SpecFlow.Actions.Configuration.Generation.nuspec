@@ -1,11 +1,11 @@
 ﻿<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
 	<metadata>
-		<id>SpecFlow.Actions.Configuration</id>
+		<id>Futile.SpecFlow.Actions.Configuration</id>
 		<version>$version$</version>
 		<authors>$author$</authors>
 		<owners>$owner$</owners>
-		<title>SpecFlow.Actions.Configuration</title>
-		<description>SpecFlow.Actions.Configuration</description>
+		<title>Futile.SpecFlow.Actions.Configuration</title>
+		<description>Fork of SpecFlow.Actions.Configuration</description>
 		<summary></summary>
 		<language>en-US</language>
 		<requireLicenseAcceptance>false</requireLicenseAcceptance>
