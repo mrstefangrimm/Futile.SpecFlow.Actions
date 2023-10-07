@@ -45,8 +45,8 @@ namespace SpecFlow.Actions.WindowsAppDriver
 
         private void RuntimePluginTestExecutionLifecycleEventEmitter_BeforeTestRun(object sender, RuntimePluginBeforeTestRunEventArgs e)
         {
-            _screenshotHelper = e.ObjectContainer.Resolve<ScreenshotHelper>();
-            _appDriverCli = e.ObjectContainer.Resolve<AppDriverCli>();
+            _screenshotHelper = e.ObjectContainer.Resolve<IScreenshotHelper>();
+            _appDriverCli = e.ObjectContainer.Resolve<IAppDriverCli>();
 
             _appDriverCli.Start();
         }
