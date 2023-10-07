@@ -7,7 +7,7 @@ namespace SpecFlow.Actions.WindowsAppDriver
     public class AppDriverCli : IAppDriverCli
     {
         private readonly IWindowsAppDriverConfiguration _windowsAppDriverConfiguration;
-
+        private bool _isDisposed;
         private Process? _appDriverProcess;
 
         public AppDriverCli(IWindowsAppDriverConfiguration windowsAppDriverConfiguration)
@@ -34,7 +34,13 @@ namespace SpecFlow.Actions.WindowsAppDriver
         /// </summary>
         public void Dispose()
         {
+            if ( _isDisposed)
+            {
+                return;
+            }
             _appDriverProcess?.Kill();
+
+            _isDisposed = true;
         }
     }
 }
