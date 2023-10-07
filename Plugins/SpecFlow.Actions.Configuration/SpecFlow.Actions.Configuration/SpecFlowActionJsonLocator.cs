@@ -5,7 +5,7 @@ namespace SpecFlow.Actions.Configuration
 {
     public class SpecFlowActionJsonLocator : ISpecFlowActionJsonLocator
     {
-        public const string JsonConfigurationFileName = "specflow.actions.json";
+        private const string JsonConfigurationFileName = "specflow.actions.json";
 
         public string? GetFilePath()
         {
