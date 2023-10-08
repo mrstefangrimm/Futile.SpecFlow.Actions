@@ -8,8 +8,8 @@
     <description>Fork of SpecFlow.Actions.WindowsAppDriver</description>
     <dependencies>
       <group targetFramework=".NETFramework4.7.1">
-        <dependency id="Futile.SpecFlow.Actions.Configuration" version="$version$"/>
-        <dependency id="Futile.SpecFlow.Actions.Appium" version="$version$"/>
+        <dependency id="SpecFlow.Actions.Configuration" version="$version$"/>
+        <dependency id="SpecFlow.Actions.Appium" version="$version$"/>
         <dependency id="Appium.WebDriver" version="4.3.1"/>
         <dependency id="SpecFlow" version="3.9.40"/>
       </group>
