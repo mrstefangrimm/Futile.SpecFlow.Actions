@@ -8,12 +8,12 @@
     <description>Fork of SpecFlow.Actions.Appium</description>
     <dependencies>
       <group targetFramework=".NETFramework4.7.1">
-        <dependency id="SpecFlow.Actions.Configuration" version="$version$"/>
+        <dependency id="Futile.SpecFlow.Actions.Configuration" version="$version$"/>
         <dependency id="Appium.WebDriver" version="4.3.1"  />
         <dependency id="SpecFlow" version="3.9.40" />
       </group>
       <group targetFramework=".NETCoreApp2.1">
-        <dependency id="SpecFlow.Actions.Configuration" version="$version$"/>
+        <dependency id="Futile.SpecFlow.Actions.Configuration" version="$version$"/>
         <dependency id="Appium.WebDriver" version="4.3.1" />
         <dependency id="SpecFlow" version="3.9.40" />
       </group>

@@ -14,8 +14,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SpecFlow.Actions.Appium\SpecFlow.Actions.Appium\SpecFlow.Actions.Appium.csproj" />
-    <ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.csproj" />
+    <PackageReference Include="Futile.SpecFlow.Actions.Appium" Version="$(SpecFlow_Actions_Version)"/>
+    <PackageReference Include="Futile.SpecFlow.Actions.Configuration" Version="$(SpecFlow_Actions_Version)"/>
   </ItemGroup>
 
 </Project>

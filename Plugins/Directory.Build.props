@@ -5,10 +5,11 @@
     <Nullable>enable</Nullable>
     <AddSyntheticProjectReferencesForSolutionDependencies>false</AddSyntheticProjectReferencesForSolutionDependencies>
 
-    
     <SpecFlow_Copyright>Copyright © SpecFlow Team</SpecFlow_Copyright>
     <SpecFlow_Authors>SpecFlow Team</SpecFlow_Authors>
     <SpecFlow_Owners>SpecFlow Team</SpecFlow_Owners>
+
+    <SpecFlow_Actions_Version>0.1.350.4</SpecFlow_Actions_Version>
   </PropertyGroup>
 
   <ItemGroup>
