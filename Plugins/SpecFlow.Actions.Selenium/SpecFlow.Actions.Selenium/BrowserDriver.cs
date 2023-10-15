@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Ignore Spelling: Initialiser
+
+using System;
 using OpenQA.Selenium;
 using SpecFlow.Actions.Selenium.DriverInitialisers;
 

@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿// Ignore Spelling: Json
+
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -44,7 +46,7 @@ namespace SpecFlow.Actions.Configuration
         public string Get(string path)
         {
             var configValue = _configuration.Value[path];
-            return configValue;
+            return configValue!;
         }
 
         public double? GetDouble(string path)
@@ -72,7 +74,7 @@ namespace SpecFlow.Actions.Configuration
 
         public string[] GetArray(string path)
         {
-            return _configuration.Value.GetSection(path).Get<string[]>();
+            return _configuration.Value.GetSection(path).Get<string[]>()!;
         }
 
         public Dictionary<string, string> GetDictionary(string path)
@@ -87,7 +89,7 @@ namespace SpecFlow.Actions.Configuration
             var dictionary = new Dictionary<string, string>();
             foreach (var child in configurationSection.GetChildren())
             {
-                dictionary[child.Key] = child.Value;
+                dictionary[child.Key] = child.Value!;
             }
 
             return dictionary;

@@ -1,4 +1,6 @@
-﻿using System;
+﻿// Ignore Spelling: Json Locator
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,7 +32,7 @@ namespace SpecFlow.Actions.Configuration
                 return new List<string>();
             }
 
-            var specflowActionPath = Path.GetDirectoryName(specflowActionLocation);
+            var specflowActionPath = Path.GetDirectoryName(specflowActionLocation)!;
 
             var targetConfigurations = Directory.GetFiles(specflowActionPath, "specflow.actions.*.json", SearchOption.TopDirectoryOnly);
 

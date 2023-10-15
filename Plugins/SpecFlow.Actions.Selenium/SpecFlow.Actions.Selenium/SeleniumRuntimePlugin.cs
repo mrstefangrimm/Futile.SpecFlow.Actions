@@ -1,4 +1,6 @@
-﻿using BoDi;
+﻿// Ignore Spelling: Plugin
+
+using BoDi;
 using SpecFlow.Actions.Selenium;
 using SpecFlow.Actions.Selenium.Configuration;
 using SpecFlow.Actions.Selenium.DriverInitialisers;
@@ -20,7 +22,7 @@ namespace SpecFlow.Actions.Selenium
             runtimePluginEvents.CustomizeScenarioDependencies += RuntimePluginEvents_CustomizeScenarioDependencies;
         }
 
-        private void RuntimePluginEvents_CustomizeScenarioDependencies(object sender, CustomizeScenarioDependenciesEventArgs e)
+        private void RuntimePluginEvents_CustomizeScenarioDependencies(object? sender, CustomizeScenarioDependenciesEventArgs e)
         {
             if (!e.ObjectContainer.IsRegistered<ISeleniumConfiguration>())
             {

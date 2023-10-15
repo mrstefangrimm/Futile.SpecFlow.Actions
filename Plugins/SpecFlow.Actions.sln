@@ -101,8 +101,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlow.Actions.LambdaTest
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Specflow.Actions.Browserstack.IntegrationTests", "Specflow.Actions.Browserstack\SpecFlow.Actions.Browserstack.IntegrationTests\Specflow.Actions.Browserstack.IntegrationTests.csproj", "{26AE7947-086C-42A5-897C-4753007BDE03}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlow.Actions.WindowsAppDriver.Generation", "SpecFlow.Actions.WindowsAppDriver\SpecFlow.Actions.WindowsAppDriver\SpecFlow.Actions.WindowsAppDriver.Generation.csproj", "{D6102100-8992-4ADD-8952-6B4D418D7FBF}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -203,10 +201,6 @@ Global
 		{26AE7947-086C-42A5-897C-4753007BDE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{26AE7947-086C-42A5-897C-4753007BDE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{26AE7947-086C-42A5-897C-4753007BDE03}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D6102100-8992-4ADD-8952-6B4D418D7FBF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D6102100-8992-4ADD-8952-6B4D418D7FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D6102100-8992-4ADD-8952-6B4D418D7FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D6102100-8992-4ADD-8952-6B4D418D7FBF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -235,7 +229,6 @@ Global
 		{2F06E45A-D954-4F58-B592-1F8C1335CA15} = {F1C6CFD0-C277-4DA5-B63C-17CE2258A6FA}
 		{266AC973-0E93-4805-B424-7242C9B7DC36} = {F1C6CFD0-C277-4DA5-B63C-17CE2258A6FA}
 		{26AE7947-086C-42A5-897C-4753007BDE03} = {063E01A2-05BD-4926-AF3C-C9B11985A1B0}
-		{D6102100-8992-4ADD-8952-6B4D418D7FBF} = {3327DE91-555F-4F18-8D44-F9856CCEFA03}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {C77D596F-1752-43EB-8984-FB53D4DAF102}

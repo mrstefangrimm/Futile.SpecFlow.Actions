@@ -1,4 +1,6 @@
-﻿using System.IO;
+﻿// Ignore Spelling: Json Locator
+
+using System.IO;
 
 namespace SpecFlow.Actions.Configuration
 {

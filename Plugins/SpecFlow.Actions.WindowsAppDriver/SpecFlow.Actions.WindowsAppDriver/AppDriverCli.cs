@@ -1,4 +1,6 @@
-﻿using SpecFlow.Actions.Appium.Configuration.WindowsAppDriver;
+﻿// Ignore Spelling: App Cli
+
+using SpecFlow.Actions.Appium.Configuration.WindowsAppDriver;
 using System;
 using System.Diagnostics;
 
@@ -25,7 +27,8 @@ namespace SpecFlow.Actions.WindowsAppDriver
 
             if (path != null)
             {
-                _appDriverProcess = Process.Start(path, _windowsAppDriverConfiguration.WindowsAppDriverPort != null ? _windowsAppDriverConfiguration.WindowsAppDriverPort.ToString() : "");
+                string arguments = _windowsAppDriverConfiguration.WindowsAppDriverPort != null && _windowsAppDriverConfiguration.WindowsAppDriverPort.HasValue ? _windowsAppDriverConfiguration.WindowsAppDriverPort.Value.ToString() : "";
+                _appDriverProcess = Process.Start(path, arguments);
             }
         }
 

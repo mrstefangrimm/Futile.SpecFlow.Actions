@@ -1,19 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>net471;netcoreapp2.1</TargetFrameworks>
+	  <TargetFrameworks>net6.0;net48</TargetFrameworks>
 	  <NuspecFile>$(MSBuildThisFileDirectory)SpecFlow.Actions.Configuration.Generation.nuspec</NuspecFile>
 	  <AssemblyName>SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin</AssemblyName>
   </PropertyGroup>
 
 	<ItemGroup>
-		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.58" />
+		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.74" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.csproj">
 			<IncludeInPackage>true</IncludeInPackage>
 		</ProjectReference>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Update="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+	    <PrivateAssets>all</PrivateAssets>
+	    <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+	  </PackageReference>
+	  <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.133" />
 	</ItemGroup>
 
 </Project>

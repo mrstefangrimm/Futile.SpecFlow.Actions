@@ -1,13 +1,11 @@
-﻿using OpenQA.Selenium;
+﻿// Ignore Spelling: Initialisers
+
+using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Edge;
 using OpenQA.Selenium.Firefox;
-using OpenQA.Selenium.IE;
 using OpenQA.Selenium.Safari;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SpecFlow.Actions.Selenium.DriverInitialisers
 {
@@ -18,13 +16,13 @@ namespace SpecFlow.Actions.Selenium.DriverInitialisers
             switch (options)
             {
                 case FirefoxOptions firefoxOptions:
-                    firefoxOptions.AddAdditionalCapability(name, value, true);
+                    firefoxOptions.AddAdditionalFirefoxOption(name, value);
                     break;
                 case ChromeOptions chromeOptions:
-                    chromeOptions.AddAdditionalCapability(name, value, true);
+                    chromeOptions.AddAdditionalChromeOption(name, value);
                     break;
                 default:
-                    options.AddAdditionalCapability(name, value);
+                    options.AddAdditionalOption(name, value);
                     break;
             }
         }
@@ -40,17 +38,13 @@ namespace SpecFlow.Actions.Selenium.DriverInitialisers
                     chromeOptions.AddArguments(arguments);
                     break;
                 case EdgeOptions edgeOptions:
-                    edgeOptions.AddAdditionalCapability("args", arguments.ToList());
-                    break;
-                case InternetExplorerOptions internetExplorerOptions:
-                    internetExplorerOptions.AddAdditionalCapability("args", arguments.ToList());
+                    //edgeOptions.AddArguments(arguments);
                     break;
                 case SafariOptions safariOptions:
-                    safariOptions.AddAdditionalCapability("args", arguments.ToList());
+                    safariOptions.TryToAddArguments(arguments);
                     break;
                 default:
-                    throw new NotImplementedException(nameof(TryToAddArguments) + " is not implemented for " +
-                                                      options.GetType().Name);
+                    throw new NotImplementedException(nameof(TryToAddArguments) + " is not implemented for " + options.GetType().Name);
             }
         }
     }

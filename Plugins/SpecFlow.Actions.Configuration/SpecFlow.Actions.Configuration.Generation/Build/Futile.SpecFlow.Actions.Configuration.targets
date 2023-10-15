@@ -25,14 +25,12 @@
 	</Target>
 
 	<PropertyGroup>
-		<_SpecFlowActionsConfigurationGeneratorPluginFramework Condition=" '$(MSBuildRuntimeType)' == 'Core'">netcoreapp2.1</_SpecFlowActionsConfigurationGeneratorPluginFramework>
-		<_SpecFlowActionsConfigurationGeneratorPluginFramework Condition=" '$(MSBuildRuntimeType)' != 'Core'">net471</_SpecFlowActionsConfigurationGeneratorPluginFramework>
+		<_SpecFlowActionsConfigurationGeneratorPluginFramework Condition=" '$(MSBuildRuntimeType)' == 'Core'">net6.0</_SpecFlowActionsConfigurationGeneratorPluginFramework>
+		<_SpecFlowActionsConfigurationGeneratorPluginFramework Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlowActionsConfigurationGeneratorPluginFramework>
 		<_SpecFlowActionsConfigurationGeneratorPluginPath>$(MSBuildThisFileDirectory)\$(_SpecFlowActionsConfigurationGeneratorPluginFramework)\SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin.dll</_SpecFlowActionsConfigurationGeneratorPluginPath>
 
-		<_SpecFlowActionsConfigurationRuntimePluginFramework Condition=" '$(TargetFrameworkIdentifier)' == '.NETCoreApp' ">netcoreapp2.1</_SpecFlowActionsConfigurationRuntimePluginFramework>
-		<_SpecFlowActionsConfigurationRuntimePluginFramework Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">net471</_SpecFlowActionsConfigurationRuntimePluginFramework>
+		<_SpecFlowActionsConfigurationRuntimePluginFramework Condition=" '$(TargetFrameworkIdentifier)' == '.NETCoreApp' ">net6.0</_SpecFlowActionsConfigurationRuntimePluginFramework>
+		<_SpecFlowActionsConfigurationRuntimePluginFramework Condition=" '$(TargetFrameworkIdentifier)' == '.NETFramework' ">net48</_SpecFlowActionsConfigurationRuntimePluginFramework>
 		<_SpecFlowActionsConfigurationRuntimePluginPath>$(MSBuildThisFileDirectory)\..\lib\$(_SpecFlowActionsConfigurationRuntimePluginFramework)\SpecFlow.Actions.Configuration.SpecFlowPlugin.dll</_SpecFlowActionsConfigurationRuntimePluginPath>
-	
-
-</PropertyGroup>
+	</PropertyGroup>
 </Project>

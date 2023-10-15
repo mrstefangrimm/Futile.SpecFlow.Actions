@@ -1,4 +1,6 @@
-﻿using OpenQA.Selenium;
+﻿// Ignore Spelling: Initialiser Initialise
+
+using OpenQA.Selenium;
 using SpecFlow.Actions.Selenium.Configuration;
 using SpecFlow.Actions.Selenium.Hoster;
 using System.Linq;

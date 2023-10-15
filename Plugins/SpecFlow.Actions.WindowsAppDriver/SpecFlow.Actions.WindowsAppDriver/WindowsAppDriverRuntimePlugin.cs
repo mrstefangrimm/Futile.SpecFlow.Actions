@@ -1,4 +1,6 @@
-﻿using SpecFlow.Actions.Appium;
+﻿// Ignore Spelling: Plugin App
+
+using SpecFlow.Actions.Appium;
 using SpecFlow.Actions.Appium.Configuration.WindowsAppDriver;
 using SpecFlow.Actions.Appium.Driver;
 using SpecFlow.Actions.WindowsAppDriver;
@@ -21,7 +23,7 @@ namespace SpecFlow.Actions.WindowsAppDriver
             runtimePluginEvents.RegisterGlobalDependencies += RuntimePluginEvents_RegisterGlobalDependencies;
         }
 
-        private void RuntimePluginEvents_RegisterGlobalDependencies(object sender, RegisterGlobalDependenciesEventArgs e)
+        private void RuntimePluginEvents_RegisterGlobalDependencies(object? sender, RegisterGlobalDependenciesEventArgs e)
         {
             var runtimePluginTestExecutionLifecycleEventEmitter = e.ObjectContainer.Resolve<RuntimePluginTestExecutionLifecycleEvents>();
             runtimePluginTestExecutionLifecycleEventEmitter.BeforeTestRun += RuntimePluginTestExecutionLifecycleEventEmitter_BeforeTestRun;
@@ -34,7 +36,7 @@ namespace SpecFlow.Actions.WindowsAppDriver
             e.ObjectContainer.RegisterTypeAs<ScreenshotHelper, IScreenshotHelper>();
         }
 
-        private void RuntimePluginTestExecutionLifecycleEventEmitter_AfterStep(object sender, RuntimePluginAfterStepEventArgs e)
+        private void RuntimePluginTestExecutionLifecycleEventEmitter_AfterStep(object? sender, RuntimePluginAfterStepEventArgs e)
         {
             var scenarioContext = e.ObjectContainer.Resolve<ScenarioContext>();
             var featureContext = e.ObjectContainer.Resolve<FeatureContext>();
@@ -43,7 +45,7 @@ namespace SpecFlow.Actions.WindowsAppDriver
             _screenshotHelper?.TakeScreenshot(appDriver, featureContext, scenarioContext);
         }
 
-        private void RuntimePluginTestExecutionLifecycleEventEmitter_BeforeTestRun(object sender, RuntimePluginBeforeTestRunEventArgs e)
+        private void RuntimePluginTestExecutionLifecycleEventEmitter_BeforeTestRun(object? sender, RuntimePluginBeforeTestRunEventArgs e)
         {
             _screenshotHelper = e.ObjectContainer.Resolve<IScreenshotHelper>();
             _appDriverCli = e.ObjectContainer.Resolve<IAppDriverCli>();
@@ -51,7 +53,7 @@ namespace SpecFlow.Actions.WindowsAppDriver
             _appDriverCli.Start();
         }
 
-        private void RuntimePluginTestExecutionLifecycleEventEmitter_AfterTestRun(object sender, RuntimePluginAfterTestRunEventArgs e)
+        private void RuntimePluginTestExecutionLifecycleEventEmitter_AfterTestRun(object? sender, RuntimePluginAfterTestRunEventArgs e)
         {
             _appDriverCli?.Dispose();
         }

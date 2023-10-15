@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\Build\SpecFlow.Actions.Configuration.props" />
+  <Import Project="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\Build\Futile.SpecFlow.Actions.Configuration.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net6.0;net471</TargetFrameworks>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,24 +15,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <!--<PackageReference Include="Microsoft.Edge.SeleniumTools" Version="3.141.3" />-->
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
-    <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
-    <PackageReference Include="Selenium.WebDriver" Version="3.141.0" />
-    <PackageReference Include="Selenium.WebDriver.IEDriver" Version="3.150.1.2" />
-    <PackageReference Include="Selenium.WebDriver.MicrosoftDriver" Version="17.17134.0" />
-    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.*" />
-    <PackageReference Include="SpecFlow.xUnit" Version="3.9.58" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.7.2" />
     <PackageReference Include="System.ValueTuple" Version="4.5.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+    <PackageReference Include="SpecFlow.xUnit" Version="3.9.74" />
+    <PackageReference Include="SpecFlow.Plus.LivingDocPlugin" Version="3.9.57" />
+    <PackageReference Include="xunit" Version="2.5.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="FluentAssertions" Version="5.10.3" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
 
-
-    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="101.0.4951.4100" />
+    <PackageReference Include="Selenium.Firefox.WebDriver" Version="0.27.0" />
+    <PackageReference Include="Selenium.WebDriver.ChromeDriver" Version="118.0.5993.7000" />
   </ItemGroup>
 
   <ItemGroup>
@@ -50,13 +45,21 @@
   </ItemGroup>
 
   <PropertyGroup>
-	  <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">netcoreapp2.1</_SpecFlow_GeneratorPlugin>
-	  <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net471</_SpecFlow_GeneratorPlugin>
+	  <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net6.0</_SpecFlow_GeneratorPlugin>
+	  <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlow_GeneratorPlugin>
 	  <_SpecFlow_GeneratorPluginPath>$(MSBuildThisFileDirectory)..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\bin\$(Configuration)\$(_SpecFlow_GeneratorPlugin)\SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
   </PropertyGroup>
 
   <ItemGroup>
 	  <SpecFlowGeneratorPlugins Include="$(_SpecFlow_GeneratorPluginPath)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.133" />
   </ItemGroup>
 
   <Target Name="BuildDependencies" BeforeTargets="PreBuildEvent;BeforeUpdateFeatureFilesInProject" AfterTargets="PreBuild">

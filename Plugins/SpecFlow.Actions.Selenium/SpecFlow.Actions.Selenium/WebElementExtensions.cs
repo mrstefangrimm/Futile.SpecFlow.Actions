@@ -1,3 +1,5 @@
+// Ignore Spelling: Dropdown
+
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
@@ -162,7 +164,7 @@ namespace SpecFlow.Actions.Selenium
         /// <returns></returns>
         public static IEnumerable<IWebElement> WhereElementsHavePropertyValue(this IEnumerable<IWebElement> webElements, string propertyName, string value)
         {
-            return webElements.Where(element => element.GetProperty(propertyName).Equals(value));
+            return webElements.Where(element => element.GetDomProperty(propertyName).Equals(value));
         }
 
         /// <summary>

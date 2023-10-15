@@ -1,4 +1,6 @@
-﻿using SpecFlow.Actions.Appium;
+﻿// Ignore Spelling: Plugin Appium
+
+using SpecFlow.Actions.Appium;
 using SpecFlow.Actions.Appium.Driver;
 using TechTalk.SpecFlow.Plugins;
 using TechTalk.SpecFlow.UnitTestProvider;
@@ -14,7 +16,7 @@ namespace SpecFlow.Actions.Appium
             runtimePluginEvents.CustomizeScenarioDependencies += RuntimePluginEvents_CustomizeScenarioDependencies;
         }
 
-        private void RuntimePluginEvents_CustomizeScenarioDependencies(object sender, CustomizeScenarioDependenciesEventArgs e)
+        private void RuntimePluginEvents_CustomizeScenarioDependencies(object? sender, CustomizeScenarioDependenciesEventArgs e)
         {
             e.ObjectContainer.RegisterTypeAs<DriverFactory, IDriverFactory>();
         }

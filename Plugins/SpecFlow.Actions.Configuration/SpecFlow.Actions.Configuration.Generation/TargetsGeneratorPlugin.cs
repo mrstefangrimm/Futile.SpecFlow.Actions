@@ -1,4 +1,6 @@
-﻿using SpecFlow.Actions.Configuration.Generation;
+﻿// Ignore Spelling: Plugin
+
+using SpecFlow.Actions.Configuration.Generation;
 using TechTalk.SpecFlow.Generator.Plugins;
 using TechTalk.SpecFlow.Generator.UnitTestConverter;
 using TechTalk.SpecFlow.Infrastructure;
@@ -14,7 +16,7 @@ namespace SpecFlow.Actions.Configuration.Generation
             generatorPluginEvents.CustomizeDependencies += GeneratorPluginEvents_CustomizeDependencies;
         }
 
-        private void GeneratorPluginEvents_CustomizeDependencies(object sender, CustomizeDependenciesEventArgs e)
+        private void GeneratorPluginEvents_CustomizeDependencies(object? sender, CustomizeDependenciesEventArgs e)
         {
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionJsonLoader, ISpecFlowActionJsonLoader>();
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionJsonLocator, ISpecFlowActionJsonLocator>();
