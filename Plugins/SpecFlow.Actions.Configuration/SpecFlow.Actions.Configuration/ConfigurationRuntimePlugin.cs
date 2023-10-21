@@ -18,7 +18,7 @@ namespace SpecFlow.Actions.Configuration
         private void RuntimePluginEvents_RegisterGlobalDependencies(object? sender, RegisterGlobalDependenciesEventArgs e)
         {
             e.ObjectContainer.RegisterTypeAs<CurrentTargetIdentifier, CurrentTargetIdentifier>();
-            // Registered here for WindowsAppDriver
+            // Registered here for WindowsAppDriver (Playwright registration can be here or per scenario)
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionJsonLocator, ISpecFlowActionJsonLocator>();
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionJsonLoader, ISpecFlowActionJsonLoader>();
         }
@@ -27,7 +27,7 @@ namespace SpecFlow.Actions.Configuration
         {
             e.ObjectContainer.RegisterTypeAs<CurrentTargetIdentifier, CurrentTargetIdentifier>();
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionsConfiguration, ISpecFlowActionsConfiguration>();
-            // Registered here for Selenium
+            // Registered here for Selenium (Playwright registration can be here or per scenario)
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionJsonLocator, ISpecFlowActionJsonLocator>();
             e.ObjectContainer.RegisterTypeAs<SpecFlowActionJsonLoader, ISpecFlowActionJsonLoader>();
         }

@@ -1,4 +1,6 @@
-﻿using Microsoft.Playwright;
+﻿// Ignore Spelling: Dropdown
+
+using Microsoft.Playwright;
 using System.Threading.Tasks;
 
 namespace SpecFlow.Actions.Playwright
@@ -43,15 +45,15 @@ namespace SpecFlow.Actions.Playwright
         }
 
         /// <summary>
-        /// Sends individual keystrokes to the specified selector
+        /// Sends individual keystroke to the specified selector
         /// </summary>
         /// <param name="selector"></param>
-        /// <param name="keys"></param>
+        /// <param name="key"></param>
         /// <param name="pageTypeOptions"></param>
         /// <returns></returns>
-        public async Task SendKeystrokesAsync(string selector, string keys, PageTypeOptions? pageTypeOptions = null)
+        public async Task SendKeystrokeAsync(string selector, string key, PagePressOptions? pagePressOptions = default)
         {
-            await (await _page).TypeAsync(selector, keys, pageTypeOptions);
+            await (await _page).PressAsync(selector, key, pagePressOptions);
         }
 
         /// <summary>
