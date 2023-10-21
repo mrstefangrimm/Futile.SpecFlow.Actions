@@ -5,7 +5,7 @@
 		<version>$version$</version>
 		<authors>$author$</authors>
 		<owners>$owner$</owners>
-		<description>SpecFlow.Actions.Playwright</description>
+		<description>Fork of SpecFlow.Actions.Playwright</description>
 		<dependencies>
 			<group targetFramework=".NETFramework4.8">
 				<dependency id="Futile.SpecFlow.Actions.Configuration" version="$version$"/>

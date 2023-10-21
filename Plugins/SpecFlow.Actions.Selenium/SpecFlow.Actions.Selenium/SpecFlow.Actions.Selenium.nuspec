@@ -5,17 +5,17 @@
     <version>$version$</version>
     <authors>$author$</authors>
     <owners>$owner$</owners>
-    <description>SpecFlow.Actions.Selenium</description>
+    <description>Fork of SpecFlow.Actions.Selenium</description>
     <dependencies>
       <group targetFramework=".NETFramework4.8">
         <dependency id="Futile.SpecFlow.Actions.Configuration" version="$version$"/>
-        <dependency id="Selenium.Support" version="4.14.0"  />
+        <dependency id="Selenium.Support" version="4.14.1"  />
         <dependency id="SpecFlow" version="3.9.74" />
         <dependency id="System.Text.Json" version="7.0.3"/>
       </group>
       <group targetFramework=".NET6.0">
         <dependency id="Futile.SpecFlow.Actions.Configuration" version="$version$"/>
-        <dependency id="Selenium.Support" version="4.14.0" />
+        <dependency id="Selenium.Support" version="4.14.1" />
         <dependency id="SpecFlow" version="3.9.74"  />
         <dependency id="System.Text.Json" version="7.0.3" />
       </group>
