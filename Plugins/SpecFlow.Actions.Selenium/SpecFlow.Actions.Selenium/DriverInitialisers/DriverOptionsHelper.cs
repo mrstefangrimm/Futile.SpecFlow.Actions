@@ -38,7 +38,7 @@ namespace SpecFlow.Actions.Selenium.DriverInitialisers
                     chromeOptions.AddArguments(arguments);
                     break;
                 case EdgeOptions edgeOptions:
-                    //edgeOptions.AddArguments(arguments);
+                    edgeOptions.AddArguments(arguments);
                     break;
                 case SafariOptions safariOptions:
                     safariOptions.TryToAddArguments(arguments);

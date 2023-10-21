@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Selenium.Support" Version="4.14.0" />
+    <PackageReference Include="Selenium.Support" Version="4.14.1" />
     <PackageReference Include="SpecFlow" Version="3.9.74" />
     <PackageReference Include="System.Text.Json" Version="7.0.3" />
   </ItemGroup>
