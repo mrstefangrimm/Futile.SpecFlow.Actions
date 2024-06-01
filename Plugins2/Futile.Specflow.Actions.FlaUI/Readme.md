@@ -46,7 +46,7 @@ Supported values:
 
 ### app
 
-filename of the executable or the name of the Windows App. The Windows App names can be found in can be found as folder in `%userprofile%\AppData\Local\Packages`.
+filename of the executable or the name of the Windows App. The Windows App names can be found in folder `%userprofile%\AppData\Local\Packages`.
 
 ### arguments
 
