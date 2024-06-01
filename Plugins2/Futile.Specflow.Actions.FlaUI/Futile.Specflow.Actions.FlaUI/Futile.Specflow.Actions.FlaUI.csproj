@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Futile.Specflow.Plugin.FlaUI.SpecFlowPlugin</AssemblyName>
+    <PackageId>Futile.Specflow.Actions.FlaUI</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FlaUI.UIA2" Version="$(FlaUIVersion)" />
+    <PackageReference Include="FlaUI.UIA3" Version="$(FlaUIVersion)" />
+    <PackageReference Include="SpecFlow" Version="$(SpecflowVersion)" />
+    <PackageReference Include="Futile.Specflow.Actions.Configuration" Version="$(FutileSpecflowActionsConfigurationVersion)" />
+    <PackageReference Include="System.Drawing.Common" Version="$(SystemDrawingCommonVersion)" />
+    <PackageReference Include="Newtonsoft.Json" Version="$(NewtonsoftJsonVersion)" />
+  </ItemGroup>
+
+</Project>

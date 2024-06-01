@@ -1,0 +1,31 @@
+{
+  "flaui": {
+    "settings": {
+      "uia": "UIA2"
+    },
+    "profiles": {
+      "Futile Calculator": {
+        "app": "..\\..\\..\\..\\Calculator\\bin\\Debug\\net6.0-windows\\Calculator.exe",
+        "launch": "Exe"
+      },
+      "Futile Calculator Release": {
+        "app": "..\\..\\..\\..\\Calculator\\bin\\Release\\net6.0-windows\\Calculator.exe",
+        "launch": "Exe"
+      },
+      "Futile Calculator with Hello FlaUI": {
+        "app": "..\\..\\..\\..\\Calculator\\bin\\Debug\\net6.0-windows\\Calculator.exe",
+        "arguments": "Hello FlaUI",
+        "launch": "Exe"
+      },
+      "Futile Calculator Release with Hello FlaUI": {
+        "app": "..\\..\\..\\..\\Calculator\\bin\\Release\\net6.0-windows\\Calculator.exe",
+        "arguments": "Hello FlaUI",
+        "launch": "Exe"
+      },
+      "Windows 11 Calculator": {
+        "app": "Microsoft.WindowsCalculator_8wekyb3d8bbwe!App",
+        "launch": "StoreApp"
+      }
+    }
+  }
+}

@@ -1,8 +1,16 @@
-# SpecFlow.Actions.WindowsAppDriver
+# Futile.SpecFlow.Actions.WindowsAppDriver
 
-[![Nuget](https://img.shields.io/nuget/v/SpecFlow.Actions.WindowsAppDriver)](https://www.nuget.org/packages/SpecFlow.Actions.WindowsAppDriver/)
+[![Nuget](https://img.shields.io/nuget/v/Futile.SpecFlow.Actions.WindowsAppDriver)](https://www.nuget.org/packages/Futile.SpecFlow.Actions.WindowsAppDriver/)
 
 This SpecFlow.Action will help you use Windows App Driver together with SpecFlow. It handles the lifetime of the Windows App Driver, and the Appium instance created to interact with the application.
+
+## Futile?
+
+Work on [Specflow](https://specflow.org/) has been [discontinued](https://github.com/SpecFlowOSS/SpecFlow/issues/2719) and the successor is [reqnroll](https://reqnroll.net/) (status May 2024). This nuget package comes from a [fork](https://github.com/mrstefangrimm/Futile.SpecFlow.Actions) that:
+ 1. Includes some bug fixes
+ 2. Uses `net48` and `net6.0`
+
+Updated examples can be found here: [WinForms](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/.NET%206/WinForms/), [WPF](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/.NET%206/WPF/).
 
 ## Prerequisites
 
@@ -123,6 +131,6 @@ The path to the Windows App Drive CLI is **not required**, so if the configurati
 
 ## How to get it
 
-Add the latest version of the `SpecFlow.Actions.WindowsAppDriver` NuGet Package to your project.
+Add the latest version of the `Futile.SpecFlow.Actions.WindowsAppDriver` NuGet Package to your project.
 
-Latest version: [![Nuget](https://img.shields.io/nuget/v/SpecFlow.Actions.WindowsAppDriver)](https://www.nuget.org/packages/SpecFlow.Actions.WindowsAppDriver/)
+Latest version: [![Nuget](https://img.shields.io/nuget/v/Futile.SpecFlow.Actions.WindowsAppDriver)](https://img.shields.io/nuget/v/SpecFlow.Actions.WindowsAppDriver/)

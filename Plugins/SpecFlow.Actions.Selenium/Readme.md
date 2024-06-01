@@ -1,10 +1,19 @@
-# SpecFlow.Actions.Selenium
+# Futile.SpecFlow.Actions.Selenium
 
-[![Nuget](https://img.shields.io/nuget/v/SpecFlow.Actions.Selenium)](https://www.nuget.org/packages/SpecFlow.Actions.Selenium/)
+[![Nuget](https://img.shields.io/nuget/v/Futile.SpecFlow.Actions.Selenium)](https://www.nuget.org/packages/Futile.SpecFlow.Actions.Selenium/)
 
 This SpecFlow.Action will help you use Selenium together with SpecFlow. It handles the lifetime of your browser and provides easy configuration and helper methods to interact with Selenium.
 
-An example can be found [here](https://github.com/SpecFlowOSS/SpecFlow-Examples/tree/master/Actions/SeleniumExample).
+## Futile?
+
+Work on [Specflow](https://specflow.org/) has been [discontinued](https://github.com/SpecFlowOSS/SpecFlow/issues/2719) and the successor is [reqnroll](https://reqnroll.net/) (status May 2024). This nuget package comes from a [fork](https://github.com/mrstefangrimm/Futile.SpecFlow.Actions) that:
+
+  1. Includes some bug fixes
+  2. Uses `net48` and `net6.0`
+
+An updated example can be found [here](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Actions/SeleniumExample).
+
+> Note: Requires environment variable `FIREFOX_WEBDRIVER_FILE_PATH` which points to a installed [geckodriver](https://github.com/mozilla/geckodriver/releases).
 
 ## Included Features
 
@@ -185,6 +194,6 @@ Available Helper Methods:
 
 ## How to get it
 
-Add the latest version of the `SpecFlow.Actions.Selenium` NuGet Package to your project.
+Add the latest version of the `Futile.SpecFlow.Actions.Selenium` NuGet Package to your project.
 
-Latest version: [![Nuget](https://img.shields.io/nuget/v/SpecFlow.Actions.Selenium)](https://www.nuget.org/packages/SpecFlow.Actions.Selenium/)
+Latest version: [![Nuget](https://img.shields.io/nuget/v/Futile.SpecFlow.Actions.Selenium)](https://www.nuget.org/packages/Futile.SpecFlow.Actions.Selenium/)

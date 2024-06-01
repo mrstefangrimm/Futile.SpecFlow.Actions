@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "Calculator": {
+      "commandName": "Project"
+    },
+    "Calculator CmdLine": {
+      "commandName": "Project",
+      "commandLineArgs": "** Test **"
+    }
+  }
+}

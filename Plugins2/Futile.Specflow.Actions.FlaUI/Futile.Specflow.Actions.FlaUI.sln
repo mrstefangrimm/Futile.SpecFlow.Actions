@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.Specflow.Actions.FlaUI", "Futile.Specflow.Actions.FlaUI\Futile.Specflow.Actions.FlaUI.csproj", "{CD5A4112-012A-4D92-8AC8-DD3231730E21}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.Specflow.Actions.FlaUI.IntegrationTests", "Futile.Specflow.Actions.FlaUI.InTests\Futile.Specflow.Actions.FlaUI.IntegrationTests.csproj", "{CFC86805-92E2-4D48-83AD-78D2F6C6FA59}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1E24304E-6C4C-4863-8B71-75163EB71457} = {1E24304E-6C4C-4863-8B71-75163EB71457}
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calculator", "Calculator\Calculator.csproj", "{1E24304E-6C4C-4863-8B71-75163EB71457}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D51223DC-1D94-45FF-AFCC-092A2DA1D368}"
+	ProjectSection(SolutionItems) = preProject
+		..\.editorconfig = ..\.editorconfig
+		AssemblyInfo.props = AssemblyInfo.props
+		Directory.Build.props = Directory.Build.props
+		Version.props = Version.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CD5A4112-012A-4D92-8AC8-DD3231730E21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD5A4112-012A-4D92-8AC8-DD3231730E21}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD5A4112-012A-4D92-8AC8-DD3231730E21}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD5A4112-012A-4D92-8AC8-DD3231730E21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFC86805-92E2-4D48-83AD-78D2F6C6FA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFC86805-92E2-4D48-83AD-78D2F6C6FA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFC86805-92E2-4D48-83AD-78D2F6C6FA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFC86805-92E2-4D48-83AD-78D2F6C6FA59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E24304E-6C4C-4863-8B71-75163EB71457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E24304E-6C4C-4863-8B71-75163EB71457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E24304E-6C4C-4863-8B71-75163EB71457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E24304E-6C4C-4863-8B71-75163EB71457}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C007713E-7971-4CAE-A945-D8E2794467C9}
+	EndGlobalSection
+EndGlobal

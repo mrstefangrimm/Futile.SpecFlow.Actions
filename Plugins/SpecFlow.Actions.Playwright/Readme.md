@@ -1,10 +1,17 @@
-# SpecFlow.Actions.Playwright
+# Futile.SpecFlow.Actions.Playwright
 
-[![Nuget](https://img.shields.io/nuget/v/SpecFlow.Actions.Playwright)](https://www.nuget.org/packages/SpecFlow.Actions.Playwright/)
-
-## Summary
+[![Nuget](https://img.shields.io/nuget/v/Futile.SpecFlow.Actions.Playwright)](https://www.nuget.org/packages/SpecFlow.Actions.Playwright/)
 
 This SpecFlow.Action will help you use [Playwright](https://playwright.dev/) together with SpecFlow. It handles the initialisation and lifetime of your browser, provides methods to work with your page selectors and a configuration that makes it easy to set up the browser instance.
+
+## Futile?
+
+Work on [Specflow](https://specflow.org/) has been [discontinued](https://github.com/SpecFlowOSS/SpecFlow/issues/2719) and the successor is [reqnroll](https://reqnroll.net/) (status May 2024). This nuget package comes from a [fork](https://github.com/mrstefangrimm/Futile.SpecFlow.Actions) that:
+
+  1. Includes some bug fixes
+  2. Uses `net48` and `net6.0`
+
+An updated example can be found [here](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Actions/PlaywrightExample/).
 
 ### Setup
 
@@ -175,6 +182,6 @@ public async Task SelectDropdownOptionAsync(string selector, int index, PageSele
 
 ## How to get it
 
-Add the latest version of the `SpecFlow.Actions.Playwright` NuGet Package to your project.
+Add the latest version of the `Futile.SpecFlow.Actions.Playwright` NuGet Package to your project.
 
-Latest version: [![Nuget](https://img.shields.io/nuget/v/SpecFlow.Actions.Playwright)](https://www.nuget.org/packages/SpecFlow.Actions.Playwright/)
+Latest version: [![Nuget](https://img.shields.io/nuget/v/Futile.SpecFlow.Actions.Playwright)](https://www.nuget.org/packages/Futile.SpecFlow.Actions.Playwright/)
