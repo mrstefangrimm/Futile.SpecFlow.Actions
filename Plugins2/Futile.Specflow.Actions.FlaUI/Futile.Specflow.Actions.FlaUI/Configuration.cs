@@ -22,7 +22,7 @@ internal class Configuration : IConfiguration {
     var json = _specFlowActionJsonLoader.Load();
     if (json == null) { throw new InvalidOperationException("Failed to load specflow.actions.json"); }
 
-    var jsonSerializerOptions = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
+    var jsonSerializerOptions = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
     jsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
 
     var specflowActionConfig = JsonSerializer.Deserialize<SpecFlowActionJson>(json, jsonSerializerOptions);

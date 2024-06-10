@@ -1,6 +1,5 @@
 <Project>
 
-  <Import Project="AssemblyInfo.props" />
   <Import Project="Version.props" />
 
   <PropertyGroup>

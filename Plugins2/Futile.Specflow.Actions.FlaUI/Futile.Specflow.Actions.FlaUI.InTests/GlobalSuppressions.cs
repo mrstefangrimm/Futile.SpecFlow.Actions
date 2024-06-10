@@ -6,3 +6,5 @@
 using System.Diagnostics.CodeAnalysis;
 
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "member", Target = "~M:Futile.Specflow.Actions.FlaUI.IntegrationTests.Steps.StoreAppStepDefinitions.#ctor(Futile.Specflow.Actions.FlaUI.IntegrationTests.CalculatorApp.CalculatorProxy)")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "member", Target = "~M:Futile.Specflow.Actions.FlaUI.IntegrationTests.CalculatorApp.AppProxyBase.#ctor(Futile.Specflow.Actions.FlaUI.FlaUIDriver)")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "type", Target = "~T:Futile.Specflow.Actions.FlaUI.IntegrationTests.CalculatorApp.AppProxyBase")]
