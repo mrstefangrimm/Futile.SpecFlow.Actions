@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="clr-namespace:Calculator"
         mc:Ignorable="d"
         Title="Calculator" Height="320" Width="320">
   <Grid>
@@ -14,11 +15,7 @@
     </Grid.RowDefinitions>
 
     <StackPanel Grid.Row="0">
-
-      <Label Name="Welcome"
-             FontSize="16" HorizontalContentAlignment="Center"
-             Content="Calculator"
-             AutomationProperties.AutomationId="LabelCommandlineArgs"/>
+      <controls:LabelWithBorder x:Name="WelcomeLabel" />
     </StackPanel>
 
     <Grid Grid.Row="1">

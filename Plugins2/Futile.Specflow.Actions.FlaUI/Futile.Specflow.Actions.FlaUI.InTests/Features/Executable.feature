@@ -7,3 +7,4 @@ Scenario: Add two numbers
 	And the second number is 13
 	When the two numbers are added
 	Then the result should be 25
+	And number of buttons is 4

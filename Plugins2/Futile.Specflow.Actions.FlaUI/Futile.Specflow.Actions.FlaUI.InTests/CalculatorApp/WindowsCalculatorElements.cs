@@ -9,7 +9,7 @@ internal class WindowsCalculatorElements
     private readonly FlaUIDriver _driver;
     private readonly Lazy<IDictionary<char, Button>> _numbersLazy;
 
-    public WindowsCalculatorElements(FlaUIDriver driver)
+    internal WindowsCalculatorElements(FlaUIDriver driver)
     {
         _driver = driver;
 
@@ -33,9 +33,9 @@ internal class WindowsCalculatorElements
         return buttons;
     }
 
-    public IDictionary<char, Button> Numbers => _numbersLazy.Value;
+    internal IDictionary<char, Button> Numbers => _numbersLazy.Value;
 
-    public Button ButtonAdd => _driver.Current.FindFirstDescendant("plusButton").AsButton();
-    public Button ButtonEquals => _driver.Current.FindFirstDescendant("equalButton").AsButton();
-    public AutomationElement Results => _driver.Current.FindFirstDescendant("CalculatorResults");
+    internal Button ButtonAdd => _driver.Current.FindFirstDescendant("plusButton").AsButton();
+    internal Button ButtonEquals => _driver.Current.FindFirstDescendant("equalButton").AsButton();
+    internal AutomationElement Results => _driver.Current.FindFirstDescendant("CalculatorResults");
 }

@@ -19,7 +19,7 @@ internal sealed class StoreAppStepDefinitions
     [Given(@"the Windows calculator")]
     public void GivenTheWindowsCalculator()
     {
-        _proxy.SelectProfile("Windows 11 Calculator");
+        _proxy.SwitchProfile("Windows 11 Calculator");
     }
 
     [Given(@"the number ""([^""]*)"" is entered")]

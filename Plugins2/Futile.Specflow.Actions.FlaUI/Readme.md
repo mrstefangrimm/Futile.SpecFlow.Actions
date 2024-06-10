@@ -13,6 +13,7 @@ Work on [Specflow](https://specflow.org/) has been [discontinued](https://github
 - Lifetime handling of the application being tested
 - Configuration via `specflow.actions.json`
 - Launch of executables and Windows Store Apps (e.g. Calculator)
+- Appium-like interactions
 
 ## Configuration
 
@@ -139,6 +140,40 @@ public sealed class CalculatorStepDefinitions
   }
 }
 ```
+
+
+## FlaUI Interactions
+
+`FlaUIDriver.Current` returns the automation element of the application's main window. Some common operations to get descendants or children without automation id are "ByName" or "ByClassName":
+
+- `var okButton = _driver.Current.FindFirstDescendant(_driver.Get.ByName("OK"));`
+- `var otherWindow = _driver.Current.FindFirstDescendant(_driver.Get.ByClassName("Configuration"));`
+
+Examples can be found on the [FlaUI website](https://github.com/FlaUI/FlaUI).
+
+## Appium-like Interactions
+
+The class `AppiumLikeInteractions` is for convenience if you are familiar with Appium or if you migrate a project based on the  `SpecFlow.Actions.WindowsAppDriver` .
+
+```csharp
+public class CalculatorMainWindowElements
+{
+  private readonly AppiumLikeInteractions _interactions;
+
+  public CalculatorMainWindowElements(FlaUIDriver driver)
+  {
+    _interactions = new AppiumLikeInteractions(driver);
+  }
+
+  public TextBox FirstNumberTextBox => _interactions.FindElementByAccessibilityId("TextBoxFirst").AsTextBox();
+  public TextBox SecondNumberTextBox => _interactions.FindElementByAccessibilityId("TextBoxSecond").AsTextBox();
+  public TextBox ResultTextBox => _interactions.FindElementByAccessibilityId("TextBoxResult").AsTextBox();
+
+  public Button AddButton => _interactions.FindElementByAccessibilityId("ButtonAdd").AsButton();
+}
+```
+> The class `CalculatorMainWindowElements` from the example above with Appium-like interactions
+
 ## How to get it
 
 Add the latest version of the `Futile.SpecFlow.Actions.FlaUI` NuGet Package to your project.

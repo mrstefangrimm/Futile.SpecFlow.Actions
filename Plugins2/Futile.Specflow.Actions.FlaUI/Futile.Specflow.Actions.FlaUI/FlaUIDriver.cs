@@ -1,5 +1,6 @@
 ﻿using FlaUI.Core;
 using FlaUI.Core.AutomationElements;
+using FlaUI.Core.Conditions;
 using FlaUI.Core.Tools;
 using FlaUI.UIA2;
 using FlaUI.UIA3;
@@ -11,29 +12,49 @@ namespace Futile.Specflow.Actions.FlaUI;
 public class FlaUIDriver : IDisposable
 {
     private readonly IConfiguration _configuration;
-    private AutomationBase? _automation;
     private Application? _application;
-    private string? _currentProfileName;
+    private string? _launchProfileName;
+    private string? _launchProfileArguments;
 
-    private readonly Lazy<AutomationElement> _currentLazy;
+    private readonly Lazy<Window> _currentLazy;
     private bool _disposed;
 
     internal FlaUIDriver(IConfiguration configuration)
     {
         _configuration = configuration;
-        _currentLazy = new Lazy<AutomationElement>(LaunchProfile);
+        _currentLazy = new Lazy<Window>(LaunchProfile);
     }
 
-    public void SwitchProfile(string name)
+    /// <summary>
+    /// Select a profile in "specflow.actions.json". By default, the first profile is used.
+    /// </summary>
+    /// <param name="name">The profile name </param>
+    /// <param name="launchProfileArguments">Command line arguments. They overwrite the arguments defined in the profile.</param>
+    /// <exception cref="InvalidOperationException">thrown when this method is called after the application launch.</exception>
+    public void SwitchProfile(string name, string? launchProfileArguments = null)
     {
-        _currentProfileName = name;
+        if (_currentLazy.IsValueCreated)
+        {
+            throw new InvalidOperationException("switch profile on launched application is not possible.");
+        }
+
+        _launchProfileName = name;
+        _launchProfileArguments = launchProfileArguments;
     }
 
-    public AutomationElement Current => _currentLazy.Value;
+    /// <summary>
+    /// Returns <see cref="Application.GetMainWindow(AutomationBase, TimeSpan?)"/> of the launched application.
+    /// </summary>
+    public Window Current => _currentLazy.Value;
 
-    private AutomationElement LaunchProfile()
+    /// <summary>
+    /// Returns <see cref="AutomationBase.ConditionFactory"/> of the used automation.
+    /// </summary>
+    public ConditionFactory Get => _currentLazy.Value.Automation.ConditionFactory;
+
+    private Window LaunchProfile()
     {
-        _automation = _configuration.Settings.UIA switch
+        AutomationBase automation = _configuration.Settings.UIA switch
         {
             FlaUIA.UIA2 => new UIA2Automation(),
             FlaUIA.UIA3 => new UIA3Automation(),
@@ -43,29 +64,29 @@ public class FlaUIDriver : IDisposable
         var profiles = _configuration.Profiles;
         if (profiles == null || !profiles.Any()) { throw new InvalidOperationException("No FlaUI profile defined"); }
 
-        if (_currentProfileName == null)
+        if (_launchProfileName == null)
         {
-            _currentProfileName = profiles.First().Key;
-            if (_currentProfileName == null || string.IsNullOrEmpty(_currentProfileName)) { throw new InvalidOperationException($"Invalid FlaUI profile name {_currentProfileName}."); }
+            _launchProfileName = profiles.First().Key;
+            if (_launchProfileName == null || string.IsNullOrEmpty(_launchProfileName)) { throw new InvalidOperationException($"Invalid FlaUI profile name {_launchProfileName}."); }
         }
 
-        var profile = profiles[_currentProfileName];
-        if (profile == null) { throw new InvalidOperationException($"Invalid profile with name {_currentProfileName}."); }
+        var profile = profiles[_launchProfileName];
+        if (profile == null) { throw new InvalidOperationException($"Invalid profile with name {_launchProfileName}."); }
 
         if (profile.Launch == LaunchCommand.Exe)
         {
-            _application = Application.Launch(profile.App, profile.Arguments);
+            _application = Application.Launch(profile.App, _launchProfileArguments ?? profile.Arguments);
         }
         else if (profile.Launch == LaunchCommand.StoreApp)
         {
-            _application = Application.LaunchStoreApp(profile.App, profile.Arguments);
+            _application = Application.LaunchStoreApp(profile.App, _launchProfileArguments ?? profile.Arguments);
         }
         else
         {
             throw new InvalidOperationException();
         }
 
-        return _application.GetMainWindow(_automation);
+        return _application.GetMainWindow(automation);
     }
 
     public void Dispose()
@@ -78,15 +99,10 @@ public class FlaUIDriver : IDisposable
         if (_application != null)
         {
             _application.Close();
-            Retry.WhileFalse(() => _application.HasExited, TimeSpan.FromSeconds(2), ignoreException: true);
+            var application = _application;
+            Retry.WhileFalse(() => application.HasExited, TimeSpan.FromSeconds(2), ignoreException: true);
             _application.Dispose();
             _application = null;
-
-        }
-        if (_automation != null)
-        {
-            _automation.Dispose();
-            _automation = null;
         }
 
         _disposed = true;

@@ -1,24 +1,27 @@
 ﻿using FlaUI.Core.AutomationElements;
+using System.Linq;
 using System.Text.RegularExpressions;
 
 namespace Futile.Specflow.Actions.FlaUI.IntegrationTests.CalculatorApp;
 
-internal class CalculatorProxy
+internal class CalculatorProxy : AppProxyBase
 {
-    private readonly FlaUIDriver _driver;
-    private readonly CalculatorMainWindowElements _exeElements;
+    private ICalculatorMainWindowElements _exeElements;
     private readonly WindowsCalculatorElements _storeElements;
 
-    public CalculatorProxy(FlaUIDriver driver)
+    public CalculatorProxy(FlaUIDriver driver) : base(driver)
     {
-        _driver = driver;
         _exeElements = new CalculatorMainWindowElements(driver);
         _storeElements = new WindowsCalculatorElements(driver);
     }
 
-    public void SelectProfile(string profileName)
+#pragma warning disable VSSpell001 // Spell Check
+
+    #region Calculator.exe
+
+    public void UseAppiumLikeInterface()
     {
-        _driver.SwitchProfile(profileName);
+        _exeElements = new AppiumLikeCalculatorMainWindowElements(_driver);
     }
 
     public void EnterFirstNumber(string number)
@@ -56,11 +59,21 @@ internal class CalculatorProxy
         return _exeElements.ResultTextBox.Text;
     }
 
-    public string GetCommandLine()
+    public int GetNumberOfButtons()
     {
-        return _driver.Current.FindFirstDescendant("LabelCommandlineArgs").AsLabel().Text;
+        return _exeElements.AllButtons.Count();
     }
 
+    public string GetCommandLine()
+    {
+        var userControl = _exeElements.WelcomeControl;
+        return userControl.FindFirstDescendant().AsLabel().Text;
+    }
+
+    #endregion Calculator.exe
+
+
+    #region Windows Calculator
 
     public void WinCalculatorEnter(char number)
     {
@@ -83,4 +96,9 @@ internal class CalculatorProxy
         var value = resultElement.Properties.Name;
         return Regex.Replace(value, "[^0-9]", string.Empty);
     }
+
+    #endregion Windows Calculator
+
+#pragma warning restore VSSpell001 // Spell Check
+
 }

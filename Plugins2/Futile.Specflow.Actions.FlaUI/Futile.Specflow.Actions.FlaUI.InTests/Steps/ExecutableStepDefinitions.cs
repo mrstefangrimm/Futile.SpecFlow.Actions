@@ -16,21 +16,31 @@ internal sealed class ExecutableStepDefinitions
 
 #pragma warning disable VSSpell001 // Spell Check
 
-    [Given(@"the Calculator\.exe with the argument Hello FlaUI")]
-    public void GivenTheCalculator_ExeWithTheArgumentHelloFlaUI()
+    [Given(@"the Calculator\.exe with the argument Hello FlaUI from the profile")]
+    public void GivenTheCalculator_ExeWithTheArgumentHelloFlaUIFromTheProfile()
     {
 #if !DEBUG
-        _proxy.SelectProfile("Futile Calculator Release with Hello FlaUI");
+        _proxy.SwitchProfile("Futile Calculator Release with Hello FlaUI");
 #endif
 
-        _proxy.SelectProfile("Futile Calculator with Hello FlaUI");
+        _proxy.SwitchProfile("Futile Calculator with Hello FlaUI");
+    }
+
+    [Given(@"the Calculator\.exe with the argument ""([^""]*)""")]
+    public void GivenTheCalculator_ExeWithTheArgument(string arguments)
+    {
+#if !DEBUG
+        _proxy.SwitchProfile("Futile Calculator Release", arguments);
+#endif
+
+        _proxy.SwitchProfile("Futile Calculator", arguments);
     }
 
     [Given("the first number is (.*)")]
     public void GivenTheFirstNumberIs(int number)
     {
 #if !DEBUG
-        _proxy.SelectProfile("Futile Calculator Release with Hello FlaUI");
+        _proxy.SwitchProfile("Futile Calculator Release");
 #endif
 
         _proxy.EnterFirstNumber(number.ToString());
@@ -80,6 +90,14 @@ internal sealed class ExecutableStepDefinitions
         string actual = _proxy.GetCommandLine();
 
         expected.Should().Be(actual);
+    }
+
+    [Then(@"number of buttons is (.*)")]
+    public void ThenNumberOfButtonsIs(int numberOfButtons)
+    {
+        int actualCount = _proxy.GetNumberOfButtons();
+
+        numberOfButtons.Should().Be(actualCount);
     }
 
 #pragma warning restore VSSpell001 // Spell Check
