@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <IsPackable>false</IsPackable>
+    <Configurations>Profiles;Screenshot;Recording</Configurations>
   </PropertyGroup>
 
   <ItemGroup>
@@ -30,9 +31,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="specflow.actions.json">
+    <Content Include="specflow.actions.profiles.json" Condition="'$(Configuration)'=='Profiles'">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+      <TargetPath>specflow.actions.json</TargetPath>
+    </Content>
+
+    <Content Include="specflow.actions.screenshot.json" Condition="'$(Configuration)'=='Screenshot'">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>specflow.actions.json</TargetPath>
+    </Content>
+
+    <Content Include="specflow.actions.recording.json" Condition="'$(Configuration)'=='Recording'">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <TargetPath>specflow.actions.json</TargetPath>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>

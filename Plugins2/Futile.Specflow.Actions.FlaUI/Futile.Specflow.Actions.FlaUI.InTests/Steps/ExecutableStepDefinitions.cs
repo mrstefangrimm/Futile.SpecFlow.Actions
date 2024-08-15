@@ -19,30 +19,18 @@ internal sealed class ExecutableStepDefinitions
     [Given(@"the Calculator\.exe with the argument Hello FlaUI from the profile")]
     public void GivenTheCalculator_ExeWithTheArgumentHelloFlaUIFromTheProfile()
     {
-#if !DEBUG
-        _proxy.SwitchProfile("Futile Calculator Release with Hello FlaUI");
-#endif
-
         _proxy.SwitchProfile("Futile Calculator with Hello FlaUI");
     }
 
     [Given(@"the Calculator\.exe with the argument ""([^""]*)""")]
     public void GivenTheCalculator_ExeWithTheArgument(string arguments)
     {
-#if !DEBUG
-        _proxy.SwitchProfile("Futile Calculator Release", arguments);
-#endif
-
         _proxy.SwitchProfile("Futile Calculator", arguments);
     }
 
     [Given("the first number is (.*)")]
     public void GivenTheFirstNumberIs(int number)
     {
-#if !DEBUG
-        _proxy.SwitchProfile("Futile Calculator Release");
-#endif
-
         _proxy.EnterFirstNumber(number.ToString());
     }
 

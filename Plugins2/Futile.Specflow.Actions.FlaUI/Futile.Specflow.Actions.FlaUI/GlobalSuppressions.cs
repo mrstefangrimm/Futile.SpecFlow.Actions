@@ -10,3 +10,6 @@ using System.Diagnostics.CodeAnalysis;
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "member", Target = "~P:Futile.Specflow.Actions.FlaUI.FlaUIProfile.App")]
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "namespace", Target = "~N:Futile.Specflow.Actions.FlaUI")]
 [assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "type", Target = "~T:Futile.Specflow.Actions.FlaUI.AppiumLikeInteractions")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "member", Target = "~M:Futile.Specflow.Actions.FlaUI.ScreenCapturer.TakeScreenshot(Futile.Specflow.Actions.FlaUI.FlaUIDriver,TechTalk.SpecFlow.FeatureContext,TechTalk.SpecFlow.ScenarioContext)")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "member", Target = "~M:Futile.Specflow.Actions.FlaUI.IScreenCapturer.TakeScreenshot(Futile.Specflow.Actions.FlaUI.FlaUIDriver,TechTalk.SpecFlow.FeatureContext,TechTalk.SpecFlow.ScenarioContext)")]
+[assembly: SuppressMessage("Naming", "VSSpell001:Spell Check", Justification = "<Pending>", Scope = "member", Target = "~P:Futile.Specflow.Actions.FlaUI.ErrorCapturing.FFMPEG")]

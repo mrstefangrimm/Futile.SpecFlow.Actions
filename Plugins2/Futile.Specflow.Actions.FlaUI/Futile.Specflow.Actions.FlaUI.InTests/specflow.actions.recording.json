@@ -1,0 +1,18 @@
+{
+  "flaui": {
+    "settings": {
+      "uia": "UIA2",
+      "capturing": {
+        "type": "Recording",
+        "outputpath": "C:\\Temp\\Capture",
+        "ffmpeg": "C:\\Tools\\ffmpeg-7.0.2-essentials_build\\bin\\ffmpeg.exe"
+      }
+    },
+    "profiles": {
+      "Futile Calculator": {
+        "app": "..\\..\\..\\..\\Calculator\\bin\\Debug\\net6.0-windows\\Calculator.exe",
+        "launch": "Exe"
+      }
+    }
+  }
+}

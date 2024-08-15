@@ -1,7 +1,7 @@
 <Project>
 
   <PropertyGroup>
-    <VersionPrefix>1.0.1</VersionPrefix>
+    <VersionPrefix>1.0.2</VersionPrefix>
 
     <NetCoreVersion>net6.0-windows</NetCoreVersion>
     <NetFrameworkVersion>net48</NetFrameworkVersion>
