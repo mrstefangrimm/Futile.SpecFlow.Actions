@@ -1,15 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Futile.Specflow.Plugin.FlaUI.SpecFlowPlugin</AssemblyName>
-    <PackageId>Futile.Specflow.Actions.FlaUI</PackageId>
+    <AssemblyName>Futile.SpecFlow.Actions.Playwright.SpecFlowPlugin</AssemblyName>
+    <PackageId>SpecFlow.Actions.Playwright</PackageId>
+    <Product>SpecFlow.Actions.Playwright</Product>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FlaUI.UIA2" Version="$(FlaUIVersion)" />
-    <PackageReference Include="FlaUI.UIA3" Version="$(FlaUIVersion)" />
+    <PackageReference Include="Microsoft.Playwright" Version="1.46.0" />
     <PackageReference Include="SpecFlow" Version="$(SpecflowVersion)" />
-    <PackageReference Include="System.Drawing.Common" Version="$(SystemDrawingCommonVersion)" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
   </ItemGroup>
 
   <ItemGroup>

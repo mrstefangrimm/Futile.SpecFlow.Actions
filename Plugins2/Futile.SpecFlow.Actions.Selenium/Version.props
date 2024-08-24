@@ -3,7 +3,7 @@
   <PropertyGroup>
     <VersionPrefix>1.0.2</VersionPrefix>
 
-    <NetCoreVersion>net8.0-windows</NetCoreVersion>
+    <NetCoreVersion>net8.0</NetCoreVersion>
     <NetFrameworkVersion>net48</NetFrameworkVersion>
 
     <SystemDrawingCommonVersion>8.0.6</SystemDrawingCommonVersion>

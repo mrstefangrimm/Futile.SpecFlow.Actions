@@ -1,15 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <AssemblyName>Futile.Specflow.Plugin.FlaUI.SpecFlowPlugin</AssemblyName>
-    <PackageId>Futile.Specflow.Actions.FlaUI</PackageId>
+    <AssemblyName>Futile.SpecFlow.Actions.Selenium.SpecFlowPlugin</AssemblyName>
+    <PackageId>Futile.SpecFlow.Actions.Selenium</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="FlaUI.UIA2" Version="$(FlaUIVersion)" />
-    <PackageReference Include="FlaUI.UIA3" Version="$(FlaUIVersion)" />
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Selenium.Support" Version="4.14.1" />
     <PackageReference Include="SpecFlow" Version="$(SpecflowVersion)" />
-    <PackageReference Include="System.Drawing.Common" Version="$(SystemDrawingCommonVersion)" />
   </ItemGroup>
 
   <ItemGroup>
