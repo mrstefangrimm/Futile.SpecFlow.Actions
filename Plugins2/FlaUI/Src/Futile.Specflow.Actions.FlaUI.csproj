@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>$(NetCoreVersion)-windows;$(NetFrameworkVersion)</TargetFrameworks>
+    <AssemblyName>Futile.Specflow.Plugin.FlaUI.SpecFlowPlugin</AssemblyName>
+    <PackageId>Futile.Specflow.Actions.FlaUI</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FlaUI.UIA2" Version="$(FlaUIVersion)" />
+    <PackageReference Include="FlaUI.UIA3" Version="$(FlaUIVersion)" />
+    <PackageReference Include="SpecFlow" Version="$(SpecflowVersion)" />
+    <PackageReference Include="System.Drawing.Common" Version="$(SystemDrawingCommonVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Configuration\Src\Futile.SpecFlow.Actions.Configuration.csproj" />
+  </ItemGroup>
+
+</Project>

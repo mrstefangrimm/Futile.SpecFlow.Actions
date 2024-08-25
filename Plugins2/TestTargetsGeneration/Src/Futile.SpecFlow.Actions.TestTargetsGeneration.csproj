@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Futile.SpecFlow.Actions.TestTargetsGeneration.SpecFlowPlugin</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.74" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Configuration\Src\Futile.SpecFlow.Actions.Configuration.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>Futile.SpecFlow.Actions.Selenium.SpecFlowPlugin</AssemblyName>
+    <PackageId>Futile.SpecFlow.Actions.Selenium</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
+    <PackageReference Include="Selenium.Support" Version="4.14.1" />
+    <PackageReference Include="SpecFlow" Version="$(SpecflowVersion)" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Configuration\Src\Futile.SpecFlow.Actions.Configuration.csproj" />
+  </ItemGroup>
+
+</Project>
