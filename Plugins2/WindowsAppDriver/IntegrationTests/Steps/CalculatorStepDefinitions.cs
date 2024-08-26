@@ -53,9 +53,9 @@ namespace Futile.SpecFlow.Actions.WindowsAppDriver.IntegrationTests.Steps
         [Then("the result should be (.*)")]
         public void ThenTheResultShouldBe(int result)
         {
-            var actualResult = int.Parse(_calculatorForm.GetResult());
+            var actualResult = double.Parse(_calculatorForm.GetResult());
 
-            result.Should().Be(actualResult);
+            result.Should().Be((int)actualResult);
         }
     }
 }

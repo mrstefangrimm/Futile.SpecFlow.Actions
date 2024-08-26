@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium.Appium.Windows;
+﻿using FluentAssertions;
+using OpenQA.Selenium.Appium.Windows;
 
 namespace Futile.SpecFlow.Actions.WindowsAppDriver.IntegrationTests.CalculatorApp;
 
@@ -11,24 +12,13 @@ public class CalculatorFormElements
         _appDriver = appDriver;
     }
 
-    public WindowsElement FirstNumberTextBox =>
-        _appDriver.Current.FindElementByAccessibilityId("textBox_firstNumber");
+    public WindowsElement FirstNumberTextBox => _appDriver.Current.FindElementByAccessibilityId("TextBoxFirst");
+    public WindowsElement SecondNumberTextBox => _appDriver.Current.FindElementByAccessibilityId("TextBoxSecond");
+    public WindowsElement ResultTextBox => _appDriver.Current.FindElementByAccessibilityId("TextBoxResult");
 
-    public WindowsElement SecondNumberTextBox =>
-        _appDriver.Current.FindElementByAccessibilityId("textBox_secondNumber");
 
-    public WindowsElement AddButton =>
-        _appDriver.Current.FindElementByAccessibilityId("button_add");
-
-    public WindowsElement SubtractButton =>
-        _appDriver.Current.FindElementByAccessibilityId("button_subtract");
-
-    public WindowsElement MultiplyButton =>
-        _appDriver.Current.FindElementByAccessibilityId("button_multiply");
-
-    public WindowsElement DivideButton =>
-        _appDriver.Current.FindElementByAccessibilityId("button_divide");
-
-    public WindowsElement ResultTextBox =>
-        _appDriver.Current.FindElementByAccessibilityId("textBox_result");
+    public WindowsElement AddButton => _appDriver.Current.FindElementByAccessibilityId("ButtonAdd");
+    public WindowsElement SubtractButton => _appDriver.Current.FindElementByAccessibilityId("ButtonSubtract");
+    public WindowsElement MultiplyButton => _appDriver.Current.FindElementByAccessibilityId("ButtonMultiply");
+    public WindowsElement DivideButton => _appDriver.Current.FindElementByAccessibilityId("ButtonDivide");
 }
