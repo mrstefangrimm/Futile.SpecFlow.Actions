@@ -19,12 +19,33 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Src\Futile.SpecFlow.Actions.Playwright.csproj" />
+    <ProjectReference Include="..\..\TestTargetsGeneration\Src\Futile.SpecFlow.Actions.TestTargetsGeneration.csproj" />
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="specflow.actions.*.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="specflow.actions.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+
+  <PropertyGroup>
+    <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net8.0</_SpecFlow_GeneratorPlugin>
+    <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlow_GeneratorPlugin>
+    <_SpecFlow_GeneratorPluginPath>..\..\TestTargetsGeneration\Src\bin\Debug\net48\Futile.SpecFlow.Actions.TestTargetsGeneration.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <SpecFlowGeneratorPlugins Include="$(_SpecFlow_GeneratorPluginPath)" />
+  </ItemGroup>
+
+  <Target Name="BuildDependencies"
+          BeforeTargets="PreBuildEvent;BeforeUpdateFeatureFilesInProject"
+          AfterTargets="PreBuild">
+    <MSBuild Projects="..\..\TestTargetsGeneration\Src\Futile.SpecFlow.Actions.TestTargetsGeneration.csproj"
+             Properties="TargetFramework=$(_SpecFlow_GeneratorPlugin)" />
+  </Target>
 
 </Project>

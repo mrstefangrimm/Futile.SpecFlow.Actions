@@ -10,14 +10,14 @@ namespace Futile.SpecFlow.Actions.Playwright;
 public class BrowserDriver : IDisposable
 {
     private readonly IPlaywrightConfiguration _playwrightConfiguration;
-    private readonly IDriverInitializer _driverInitialiser;
+    private readonly IDriverInitializer _driverInitializer;
     protected readonly AsyncLazy<IBrowser> _currentBrowserLazy;
     protected bool _isDisposed;
 
-    public BrowserDriver(IPlaywrightConfiguration playwrightConfiguration, IDriverInitializer driverInitialiser)
+    public BrowserDriver(IPlaywrightConfiguration playwrightConfiguration, IDriverInitializer driverInitializer)
     {
         _playwrightConfiguration = playwrightConfiguration;
-        _driverInitialiser = driverInitialiser;
+        _driverInitializer = driverInitializer;
         _currentBrowserLazy = new AsyncLazy<IBrowser>(CreatePlaywrightAsync);
     }
 
@@ -34,11 +34,11 @@ public class BrowserDriver : IDisposable
     {
         return _playwrightConfiguration.Browser switch
         {
-            Browser.Chrome => await _driverInitialiser.GetChromeDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
-            Browser.Firefox => await _driverInitialiser.GetFirefoxDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
-            Browser.Edge => await _driverInitialiser.GetEdgeDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
-            Browser.Chromium => await _driverInitialiser.GetChromiumDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
-            Browser.Webkit => await _driverInitialiser.GetWebKitDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
+            Browser.Chrome => await _driverInitializer.GetChromeDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
+            Browser.Firefox => await _driverInitializer.GetFirefoxDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
+            Browser.Edge => await _driverInitializer.GetEdgeDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
+            Browser.Chromium => await _driverInitializer.GetChromiumDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
+            Browser.Webkit => await _driverInitializer.GetWebKitDriverAsync(_playwrightConfiguration.Arguments, _playwrightConfiguration.DefaultTimeout, _playwrightConfiguration.Headless, _playwrightConfiguration.SlowMo, _playwrightConfiguration.TraceDir),
             _ => throw new NotImplementedException($"Support for browser {_playwrightConfiguration.Browser} is not implemented yet"),
         };
     }

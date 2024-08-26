@@ -9,14 +9,14 @@ namespace Futile.SpecFlow.Actions.Selenium;
 /// </summary>
 public class BrowserDriver : IDisposable
 {
-    private readonly IDriverInitializer _driverInitialiser;
+    private readonly IDriverInitializer _driverInitializer;
 
     protected readonly Lazy<IWebDriver> CurrentWebDriverLazy;
     protected bool IsDisposed;
 
-    public BrowserDriver(IDriverInitializer driverInitialiser)
+    public BrowserDriver(IDriverInitializer driverInitializer)
     {
-        _driverInitialiser = driverInitialiser;
+        _driverInitializer = driverInitializer;
         CurrentWebDriverLazy = new Lazy<IWebDriver>(CreateWebDriver);
     }
 
@@ -28,10 +28,9 @@ public class BrowserDriver : IDisposable
     /// <summary>
     /// Creates the Selenium web driver (opens a browser)
     /// </summary>
-    /// <returns></returns>
     private IWebDriver CreateWebDriver()
     {
-        return _driverInitialiser.Initialize();
+        return _driverInitializer.Initialize();
     }
 
     /// <summary>
