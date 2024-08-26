@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Futile.SpecFlow.Actions.Playwright\Futile.SpecFlow.Actions.Playwright.csproj" />
+    <ProjectReference Include="..\Src\Futile.SpecFlow.Actions.Playwright.csproj" />
   </ItemGroup>
 
   <ItemGroup>

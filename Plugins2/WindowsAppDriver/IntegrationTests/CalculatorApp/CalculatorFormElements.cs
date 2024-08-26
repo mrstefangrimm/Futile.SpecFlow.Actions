@@ -1,5 +1,4 @@
-﻿using FluentAssertions;
-using OpenQA.Selenium.Appium.Windows;
+﻿using OpenQA.Selenium.Appium.Windows;
 
 namespace Futile.SpecFlow.Actions.WindowsAppDriver.IntegrationTests.CalculatorApp;
 
