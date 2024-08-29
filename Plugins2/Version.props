@@ -6,11 +6,41 @@
     <NetCoreVersion>net8.0</NetCoreVersion>
     <NetFrameworkVersion>net48</NetFrameworkVersion>
 
-    <SystemDrawingCommonVersion>8.0.6</SystemDrawingCommonVersion>
+    <!-- vulnerable packages -->
+    <SystemTextRegularExpressionsVersion>4.3.1</SystemTextRegularExpressionsVersion>
+    <SystemTextJsonVersion>8.0.4</SystemTextJsonVersion>
+    <NewtonsoftJsonVersion>13.0.3</NewtonsoftJsonVersion>
 
     <SpecflowVersion>3.9.74</SpecflowVersion>
 
+    <!-- Configuration -->
+    <MicrosoftExtensionsConfigurationBinderVersion>8.0.2</MicrosoftExtensionsConfigurationBinderVersion>
+    <MicrosoftExtensionsConfigurationJsonVersion>8.0.0</MicrosoftExtensionsConfigurationJsonVersion>
+
+    <!-- FlaUI -->
     <FlaUIVersion>4.0.0</FlaUIVersion>
+    <SystemDrawingCommonVersion>8.0.8</SystemDrawingCommonVersion>
+
+    <!-- Playwright -->
+    <MicrosoftPlaywrightVersion>1.46.0</MicrosoftPlaywrightVersion>
+
+    <!-- Appium -->
+    <AppiumWebDriverVersion>4.4.5</AppiumWebDriverVersion>
+
+    <!-- Selenium -->
+    <SeleniumSupportVersion>4.24.0</SeleniumSupportVersion>
+    <SeleniumFirefoxWebDriverVersion>0.27.0</SeleniumFirefoxWebDriverVersion>
+    <SeleniumWebDriverChromeDriverVersion>128.0.6613.8600</SeleniumWebDriverChromeDriverVersion>
+
+    <!-- WindowsAppDriver -->
+    <AppiumWebDriverVersion>4.4.5</AppiumWebDriverVersion>
+
+    <!-- Test Frameworks -->
+    <MicrosoftNETTestSdkVersion>17.11.0</MicrosoftNETTestSdkVersion>
+    <FluentAssertionsVersion>6.12.0</FluentAssertionsVersion>
+    <MoqVersion>4.20.70</MoqVersion>
+    <XunitVersion>2.9.0</XunitVersion>
+    <XunitRunnerVisualstudioVersion>2.8.2</XunitRunnerVisualstudioVersion>
 
   </PropertyGroup>
 

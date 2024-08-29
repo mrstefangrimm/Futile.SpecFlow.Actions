@@ -6,8 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
-    <PackageReference Include="Selenium.Support" Version="4.14.1" />
+    <PackageReference Include="Selenium.Support" Version="$(SeleniumSupportVersion)" />
     <PackageReference Include="SpecFlow" Version="$(SpecflowVersion)" />
   </ItemGroup>
 
