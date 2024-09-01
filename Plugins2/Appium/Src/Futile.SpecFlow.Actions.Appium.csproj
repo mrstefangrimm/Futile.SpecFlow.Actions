@@ -3,6 +3,8 @@
   <PropertyGroup>
     <AssemblyName>Futile.SpecFlow.Actions.Appium.SpecFlowPlugin</AssemblyName>
     <PackageId>Futile.SpecFlow.Actions.Appium</PackageId>
+    <Authors>$(me)</Authors>
+    <Description>For Appium-based SpecFlow plugins</Description>
   </PropertyGroup>
 
   <ItemGroup>

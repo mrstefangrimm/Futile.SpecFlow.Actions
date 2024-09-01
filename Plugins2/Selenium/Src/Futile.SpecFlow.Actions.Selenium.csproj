@@ -3,6 +3,8 @@
   <PropertyGroup>
     <AssemblyName>Futile.SpecFlow.Actions.Selenium.SpecFlowPlugin</AssemblyName>
     <PackageId>Futile.SpecFlow.Actions.Selenium</PackageId>
+    <Authors>$(me)</Authors>
+    <Description>SpecFlow plugin for Selenium</Description>
   </PropertyGroup>
 
   <ItemGroup>

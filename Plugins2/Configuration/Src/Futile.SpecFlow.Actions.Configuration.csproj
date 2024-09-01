@@ -3,6 +3,8 @@
   <PropertyGroup>
     <AssemblyName>Futile.SpecFlow.Actions.Configuration.SpecFlowPlugin</AssemblyName>
     <PackageId>Futile.SpecFlow.Actions.Configuration</PackageId>
+    <Authors>$(me)</Authors>
+    <Description>For SpecFlow plugins</Description>
   </PropertyGroup>
 
   <ItemGroup>

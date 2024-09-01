@@ -13,8 +13,7 @@ public class RuntimePlugin : IRuntimePlugin
         runtimePluginEvents.CustomizeScenarioDependencies += RuntimePluginEvents_CustomizeScenarioDependencies;
     }
 
-    private void RuntimePluginEvents_CustomizeScenarioDependencies(object? sender,
-        CustomizeScenarioDependenciesEventArgs e)
+    private void RuntimePluginEvents_CustomizeScenarioDependencies(object? sender, CustomizeScenarioDependenciesEventArgs e)
     {
         e.ObjectContainer.RegisterTypeAs<PlaywrightConfiguration, IPlaywrightConfiguration>();
         e.ObjectContainer.RegisterTypeAs<DriverInitializer, IDriverInitializer>();

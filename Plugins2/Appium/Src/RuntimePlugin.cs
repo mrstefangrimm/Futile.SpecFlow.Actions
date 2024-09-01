@@ -2,11 +2,11 @@
 using TechTalk.SpecFlow.Plugins;
 using TechTalk.SpecFlow.UnitTestProvider;
 
-[assembly: RuntimePlugin(typeof(Futile.SpecFlow.Actions.Appium.AppiumRuntimePlugin))]
+[assembly: RuntimePlugin(typeof(Futile.SpecFlow.Actions.Appium.RuntimePlugin))]
 
 namespace Futile.SpecFlow.Actions.Appium
 {
-    public class AppiumRuntimePlugin : IRuntimePlugin
+    public class RuntimePlugin : IRuntimePlugin
     {
         public void Initialize(RuntimePluginEvents runtimePluginEvents, RuntimePluginParameters runtimePluginParameters, UnitTestProviderConfiguration unitTestProviderConfiguration)
         {

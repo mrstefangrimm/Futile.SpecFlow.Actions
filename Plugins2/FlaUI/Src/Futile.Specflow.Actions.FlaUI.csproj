@@ -4,6 +4,9 @@
     <TargetFrameworks>$(NetCoreVersion)-windows;$(NetFrameworkVersion)</TargetFrameworks>
     <AssemblyName>Futile.Specflow.Plugin.FlaUI.SpecFlowPlugin</AssemblyName>
     <PackageId>Futile.Specflow.Actions.FlaUI</PackageId>
+    <Authors>$(me)</Authors>
+    <Description>SpecFlow plugin for FlaUI</Description>
+    <Version>$(FlaUIVersionPrefix)</Version>
   </PropertyGroup>
 
   <ItemGroup>

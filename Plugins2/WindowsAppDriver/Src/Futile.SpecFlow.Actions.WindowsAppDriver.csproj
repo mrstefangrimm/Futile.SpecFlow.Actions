@@ -3,6 +3,8 @@
   <PropertyGroup>
 	  <AssemblyName>Futile.SpecFlow.Actions.WindowsAppDriver.SpecFlowPlugin</AssemblyName>
 	  <PackageId>Futile.SpecFlow.Actions.WindowsAppDriver</PackageId>
+    <Authors>$(me)</Authors>
+    <Description>SpecFlow plugin for WindowsAppDriver</Description>
   </PropertyGroup>
 
   <ItemGroup>
