@@ -6,7 +6,7 @@ using TechTalk.SpecFlow.Generator.CodeDom;
 using TechTalk.SpecFlow.Generator.UnitTestConverter;
 using TechTalk.SpecFlow.Generator.UnitTestProvider;
 
-namespace Futile.SpecFlow.Actions.TestTargetsGeneration;
+namespace Futile.SpecFlow.Actions.MultiTargetGeneration;
 
 internal class UnitTestTargetFeatureGenerator : UnitTestFeatureGeneratorBase
 {

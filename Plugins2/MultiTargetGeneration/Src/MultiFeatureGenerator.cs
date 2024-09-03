@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TechTalk.SpecFlow.Generator.UnitTestConverter;
 using TechTalk.SpecFlow.Parser;
 
-namespace Futile.SpecFlow.Actions.TestTargetsGeneration;
+namespace Futile.SpecFlow.Actions.MultiTargetGeneration;
 
 internal class MultiFeatureGenerator : IFeatureGenerator
 {

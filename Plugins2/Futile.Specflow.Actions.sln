@@ -22,7 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Version.props = Version.props
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.SpecFlow.Actions.TestTargetsGeneration", "TestTargetsGeneration\Src\Futile.SpecFlow.Actions.TestTargetsGeneration.csproj", "{5A34EFCA-9069-430E-8C37-0CE891BB4093}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.SpecFlow.Actions.MultiTargetGeneration", "MultiTargetGeneration\Src\Futile.SpecFlow.Actions.MultiTargetGeneration.csproj", "{5A34EFCA-9069-430E-8C37-0CE891BB4093}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.SpecFlow.Actions.Appium", "Appium\Src\Futile.SpecFlow.Actions.Appium.csproj", "{D2CDE6AC-CF41-4089-AB5A-E95AF94604E2}"
 EndProject

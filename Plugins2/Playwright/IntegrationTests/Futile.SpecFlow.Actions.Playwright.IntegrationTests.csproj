@@ -24,7 +24,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Src\Futile.SpecFlow.Actions.Playwright.csproj" />
-    <ProjectReference Include="..\..\TestTargetsGeneration\Src\Futile.SpecFlow.Actions.TestTargetsGeneration.csproj" />
+    <ProjectReference Include="..\..\MultiTargetGeneration\Src\Futile.SpecFlow.Actions.MultiTargetGeneration.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -39,7 +39,7 @@
   <PropertyGroup>
     <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net8.0</_SpecFlow_GeneratorPlugin>
     <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlow_GeneratorPlugin>
-    <_SpecFlow_GeneratorPluginPath>..\..\TestTargetsGeneration\Src\bin\Debug\net48\Futile.SpecFlow.Actions.TestTargetsGeneration.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
+    <_SpecFlow_GeneratorPluginPath>..\..\MultiTargetGeneration\Src\bin\Debug\net48\Futile.SpecFlow.Actions.MultiTargetGeneration.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -47,7 +47,7 @@
   </ItemGroup>
 
   <Target Name="BuildDependencies" BeforeTargets="PreBuildEvent;BeforeUpdateFeatureFilesInProject" AfterTargets="PreBuild">
-    <MSBuild Projects="..\..\TestTargetsGeneration\Src\Futile.SpecFlow.Actions.TestTargetsGeneration.csproj" Properties="TargetFramework=$(_SpecFlow_GeneratorPlugin)" />
+    <MSBuild Projects="..\..\MultiTargetGeneration\Src\Futile.SpecFlow.Actions.MultiTargetGeneration.csproj" Properties="TargetFramework=$(_SpecFlow_GeneratorPlugin)" />
   </Target>
 
 </Project>

@@ -4,9 +4,9 @@ using TechTalk.SpecFlow.Generator.UnitTestConverter;
 using TechTalk.SpecFlow.Infrastructure;
 using TechTalk.SpecFlow.UnitTestProvider;
 
-[assembly: GeneratorPlugin(typeof(Futile.SpecFlow.Actions.TestTargetsGeneration.TargetsGeneratorPlugin))]
+[assembly: GeneratorPlugin(typeof(Futile.SpecFlow.Actions.MultiTargetGeneration.TargetsGeneratorPlugin))]
 
-namespace Futile.SpecFlow.Actions.TestTargetsGeneration
+namespace Futile.SpecFlow.Actions.MultiTargetGeneration
 {
     internal class TargetsGeneratorPlugin : IGeneratorPlugin
     {

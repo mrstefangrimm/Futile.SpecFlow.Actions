@@ -13,7 +13,7 @@ using TechTalk.SpecFlow.Generator.UnitTestProvider;
 using TechTalk.SpecFlow.Parser;
 using TechTalk.SpecFlow.Tracing;
 
-namespace Futile.SpecFlow.Actions.TestTargetsGeneration;
+namespace Futile.SpecFlow.Actions.MultiTargetGeneration;
 
 public abstract class UnitTestFeatureGeneratorBase : IFeatureGenerator
 {

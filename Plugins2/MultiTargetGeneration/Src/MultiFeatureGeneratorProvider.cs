@@ -9,7 +9,7 @@ using TechTalk.SpecFlow.Generator.UnitTestConverter;
 using TechTalk.SpecFlow.Generator.UnitTestProvider;
 using TechTalk.SpecFlow.Parser;
 
-namespace Futile.SpecFlow.Actions.TestTargetsGeneration;
+namespace Futile.SpecFlow.Actions.MultiTargetGeneration;
 
 internal class MultiFeatureGeneratorProvider : IFeatureGeneratorProvider
 {
