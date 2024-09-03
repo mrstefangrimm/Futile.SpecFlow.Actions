@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <AssemblyName>Futile.SpecFlow.Actions.Playwright.SpecFlowPlugin</AssemblyName>
-    <PackageId>SpecFlow.Actions.Playwright</PackageId>
+    <PackageId>Futile.SpecFlow.Actions.Playwright</PackageId>
     <Authors>$(me)</Authors>
     <Description>SpecFlow plugin for Playwright</Description>
   </PropertyGroup>
