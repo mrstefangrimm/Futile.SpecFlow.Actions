@@ -23,6 +23,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!--See: https://andersmadsen.dev/guides/how-to-disable-test-parallelization-in-xunit -->
+    <AssemblyAttribute Include="Xunit.CollectionBehaviorAttribute">
+      <_Parameter1>DisableTestParallelization = true</_Parameter1>
+      <_Parameter1_IsLiteral>true</_Parameter1_IsLiteral>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SpecFlow.Actions.Selenium\SpecFlow.Actions.Selenium.csproj" />
     <ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\SpecFlow.Actions.Configuration.Generation.csproj" />
   </ItemGroup>
