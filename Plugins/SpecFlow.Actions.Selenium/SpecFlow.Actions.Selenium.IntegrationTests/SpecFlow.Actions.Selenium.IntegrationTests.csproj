@@ -23,8 +23,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\SpecFlow.Actions.Configuration.Generation.csproj" />
     <ProjectReference Include="..\SpecFlow.Actions.Selenium\SpecFlow.Actions.Selenium.csproj" />
+    <ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\SpecFlow.Actions.Configuration.Generation.csproj" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,13 +37,13 @@
   </ItemGroup>
 
   <PropertyGroup>
-	  <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net6.0</_SpecFlow_GeneratorPlugin>
-	  <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlow_GeneratorPlugin>
-	  <_SpecFlow_GeneratorPluginPath>$(MSBuildThisFileDirectory)..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\bin\$(Configuration)\$(_SpecFlow_GeneratorPlugin)\SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
+    <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net8.0</_SpecFlow_GeneratorPlugin>
+    <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlow_GeneratorPlugin>
+    <_SpecFlow_GeneratorPluginPath>$(MSBuildThisFileDirectory)..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\bin\$(Configuration)\$(_SpecFlow_GeneratorPlugin)\SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
   </PropertyGroup>
 
   <ItemGroup>
-	  <SpecFlowGeneratorPlugins Include="$(_SpecFlow_GeneratorPluginPath)" />
+    <SpecFlowGeneratorPlugins Include="$(_SpecFlow_GeneratorPluginPath)" />
   </ItemGroup>
 
   <ItemGroup>
