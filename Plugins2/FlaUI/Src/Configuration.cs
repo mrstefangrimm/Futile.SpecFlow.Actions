@@ -1,4 +1,4 @@
-﻿using Futile.SpecFlow.Actions.Configuration;
+﻿using SpecFlow.Actions.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text.Json;
