@@ -1,28 +1,28 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFrameworks>net8.0;net48</TargetFrameworks>
-	  <NuspecFile>$(MSBuildThisFileDirectory)SpecFlow.Actions.Configuration.Generation.nuspec</NuspecFile>
-	  <AssemblyName>SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin</AssemblyName>
+    <TargetFrameworks>net8.0;net48</TargetFrameworks>
+    <NuspecFile>$(MSBuildThisFileDirectory)SpecFlow.Actions.Configuration.Generation.nuspec</NuspecFile>
+    <AssemblyName>SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin</AssemblyName>
   </PropertyGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-		<PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.74" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="SpecFlow.CustomPlugin" Version="3.9.74" />
+  </ItemGroup>
 
-	<ItemGroup>
-		<ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.csproj">
-			<IncludeInPackage>true</IncludeInPackage>
-		</ProjectReference>
-	</ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.csproj">
+      <IncludeInPackage>true</IncludeInPackage>
+    </ProjectReference>
+  </ItemGroup>
 
-	<ItemGroup>
-	  <PackageReference Update="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
-	    <PrivateAssets>all</PrivateAssets>
-	    <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-	  </PackageReference>
-	  <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.143" />
-	</ItemGroup>
+  <ItemGroup>
+    <PackageReference Update="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Update="Nerdbank.GitVersioning" Version="3.6.143" />
+  </ItemGroup>
 
 </Project>
