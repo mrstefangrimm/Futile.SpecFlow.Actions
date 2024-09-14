@@ -1,0 +1,17 @@
+{
+  "flaui": {
+    "settings": {
+      "uia": "UIA2",
+      "capturing": {
+        "type": "Screenshot",
+        "outputpath": "C:\\Temp\\Capture"
+      }
+    },
+    "profiles": {
+      "Futile Calculator": {
+        "app": "..\\..\\..\\..\\..\\Calculator\\bin\\Debug\\net6.0-windows\\Futile.SpecFlow.Actions.Calculator.exe",
+        "launch": "Exe"
+      }
+    }
+  }
+}

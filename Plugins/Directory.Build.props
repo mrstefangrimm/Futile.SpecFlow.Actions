@@ -5,17 +5,16 @@
     <Nullable>enable</Nullable>
     <AddSyntheticProjectReferencesForSolutionDependencies>false</AddSyntheticProjectReferencesForSolutionDependencies>
 
-    <SpecFlow_Copyright>Copyright © SpecFlow Team</SpecFlow_Copyright>
-    <SpecFlow_Authors>SpecFlow Team</SpecFlow_Authors>
-    <SpecFlow_Owners>SpecFlow Team</SpecFlow_Owners>
+    <SpecFlow_Copyright></SpecFlow_Copyright>
+    <SpecFlow_Authors>mrstefangrimm</SpecFlow_Authors>
+    <SpecFlow_Owners></SpecFlow_Owners>
 
-    <SpecFlow_Actions_Version>0.1.350.5</SpecFlow_Actions_Version>
+    <SpecFlow_Actions_Version>0.1.350.6</SpecFlow_Actions_Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.255" PrivateAssets="all" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
-    <None Include="$(MSBuildThisFileDirectory)/../LICENSE" Pack="true" PackagePath="" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
-    <None Include="$(MSBuildThisFileDirectory)/specflow-icon.png" Pack="true" PackagePath="images" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
+    <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
     <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -24,11 +23,11 @@
 
   <PropertyGroup>
     <Authors>$(SpecFlow_Authors)</Authors>
-    <Company>Tricentis</Company>
+    <Company></Company>
     <Product />
     <PackageProjectUrl>https://specflow.org</PackageProjectUrl>
-    <PackageIcon>images/specflow-icon.png</PackageIcon>
-    <RepositoryUrl>https://github.com/SpecFlowOSS/SpecFlow.Actions</RepositoryUrl>
+    <PackageIcon></PackageIcon>
+    <RepositoryUrl>https://github.com/mrstefangrimm/Futile.SpecFlow.Actions</RepositoryUrl>
     <PackageTags>specflow bdd gherkin cucumber</PackageTags>
     <Description>SpecFlow aims at bridging the communication gap between domain experts and developers by binding business readable behavior specifications to the underlying implementation. Our mission is to provide a pragmatic and frictionless approach to Acceptance Test Driven Development and Behavior Driven Development for .NET projects today."</Description>
     <Copyright>$(SpecFlow_Copyright)</Copyright>

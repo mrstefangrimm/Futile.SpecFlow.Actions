@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.Specflow.Actions.FlaUI", "FlaUI\Src\Futile.Specflow.Actions.FlaUI.csproj", "{B82C3F73-9A7C-439A-9342-09C4A9663F11}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.Specflow.Actions.FlaUI.IntegrationTests", "FlaUI\IntegrationTests\Futile.Specflow.Actions.FlaUI.IntegrationTests.csproj", "{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{DFEC1796-57CF-49E2-8C4B-BC0E0AC99D6A}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		AssemblyInfo.props = AssemblyInfo.props
+		Directory.Build.props = Directory.Build.props
+		..\.github\workflows\dotnet.yml = ..\.github\workflows\dotnet.yml
+		Version.props = Version.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dependencies", "Dependencies", "{91396742-50CB-44A1-8270-361EA15EEACC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpecFlow.Actions.Configuration", "..\Plugins\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.csproj", "{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Futile.SpecFlow.Actions.Calculator", "Calculator\Futile.SpecFlow.Actions.Calculator.csproj", "{DC7983C3-7C94-4732-B796-12B03D71238B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Profiles|Any CPU = Profiles|Any CPU
+		Recording|Any CPU = Recording|Any CPU
+		Release|Any CPU = Release|Any CPU
+		Screenshot|Any CPU = Screenshot|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Profiles|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Profiles|Any CPU.Build.0 = Debug|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Recording|Any CPU.ActiveCfg = Release|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Recording|Any CPU.Build.0 = Release|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Screenshot|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82C3F73-9A7C-439A-9342-09C4A9663F11}.Screenshot|Any CPU.Build.0 = Debug|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Debug|Any CPU.ActiveCfg = Profiles|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Debug|Any CPU.Build.0 = Profiles|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Profiles|Any CPU.ActiveCfg = Profiles|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Profiles|Any CPU.Build.0 = Profiles|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Recording|Any CPU.ActiveCfg = Recording|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Recording|Any CPU.Build.0 = Recording|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Release|Any CPU.ActiveCfg = Recording|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Release|Any CPU.Build.0 = Recording|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Screenshot|Any CPU.ActiveCfg = Screenshot|Any CPU
+		{325E2D12-9FDF-45F5-89C4-BDEF384AFBA5}.Screenshot|Any CPU.Build.0 = Screenshot|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Profiles|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Profiles|Any CPU.Build.0 = Debug|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Recording|Any CPU.ActiveCfg = Release|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Recording|Any CPU.Build.0 = Release|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Screenshot|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF}.Screenshot|Any CPU.Build.0 = Debug|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Profiles|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Profiles|Any CPU.Build.0 = Debug|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Recording|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Recording|Any CPU.Build.0 = Release|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Screenshot|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC7983C3-7C94-4732-B796-12B03D71238B}.Screenshot|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3EACC777-EBF5-483F-BDF3-9867C97EE4FF} = {91396742-50CB-44A1-8270-361EA15EEACC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7E31619C-04D0-4FF0-B7DD-C2B9F9779AB3}
+	EndGlobalSection
+EndGlobal

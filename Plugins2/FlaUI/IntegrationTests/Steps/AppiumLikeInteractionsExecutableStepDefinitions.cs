@@ -1,5 +1,4 @@
-﻿using FluentAssertions;
-using Futile.Specflow.Actions.FlaUI.IntegrationTests.CalculatorApp;
+﻿using Futile.Specflow.Actions.FlaUI.IntegrationTests.CalculatorApp;
 using TechTalk.SpecFlow;
 
 namespace Futile.Specflow.Actions.FlaUI.IntegrationTests.Steps;

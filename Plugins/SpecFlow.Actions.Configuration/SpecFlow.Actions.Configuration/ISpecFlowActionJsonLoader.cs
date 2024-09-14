@@ -1,4 +1,6 @@
-﻿namespace SpecFlow.Actions.Configuration
+﻿// Ignore Spelling: Json
+
+namespace SpecFlow.Actions.Configuration
 {
     public interface ISpecFlowActionJsonLoader
     {

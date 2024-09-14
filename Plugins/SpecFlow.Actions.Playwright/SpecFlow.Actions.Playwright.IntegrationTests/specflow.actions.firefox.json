@@ -1,0 +1,5 @@
+﻿{
+  "playwright": {
+    "browser": "firefox"
+  }
+}

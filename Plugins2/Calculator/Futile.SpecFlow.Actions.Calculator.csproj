@@ -1,8 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <TargetFrameworks>$(NetCoreVersion)-windows</TargetFrameworks>
     <OutputType>WinExe</OutputType>
-    <TargetFrameworks>$(NetCoreVersion)</TargetFrameworks>
     <UseWPF>true</UseWPF>
     <IsPackable>false</IsPackable>
   </PropertyGroup>

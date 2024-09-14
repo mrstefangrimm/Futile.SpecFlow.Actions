@@ -19,7 +19,7 @@ Work on [Specflow](https://specflow.org/) has been [discontinued](https://github
 
 You can configure this plugin via the  `specflow.actions.json`.
 
-``` json
+```json
 {
   "flaui": {
     "settings": {

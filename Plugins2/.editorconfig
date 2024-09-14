@@ -228,6 +228,10 @@ csharp_style_prefer_readonly_struct = true:suggestion
 csharp_style_allow_blank_line_after_token_in_arrow_expression_clause_experimental = true:silent
 csharp_style_allow_blank_line_after_token_in_conditional_expression_experimental = true:silent
 csharp_style_prefer_extended_property_pattern = true:suggestion
+csharp_prefer_static_anonymous_function = true:suggestion
+vsspell_section_id = 9fed1da28cd248f9a37b0789b4b5fb4b
+vsspell_dictionary_languages_9fed1da28cd248f9a37b0789b4b5fb4b = inherited
+vsspell_ignored_words_9fed1da28cd248f9a37b0789b4b5fb4b = Accessor|App|Appium|Awaiter|Cli|Dropdown|Json|Locator|Locators|Noop|Plugin|Screenshot|Screenshots|slowmo|Specflow|Username
 
 [*.{cs,vb}]
 dotnet_diagnostic.CA1822.severity=silent
@@ -266,3 +270,4 @@ dotnet_style_qualification_for_field = false:warning
 dotnet_style_qualification_for_property = false:warning
 dotnet_style_qualification_for_method = false:warning
 dotnet_style_qualification_for_event = false:warning
+[*]
