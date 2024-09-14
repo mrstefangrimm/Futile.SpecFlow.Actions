@@ -24,9 +24,12 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
+
     - name: Restore dependencies
       run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
+
     - name: Build
       run: dotnet build --no-restore Plugins2\Futile.SpecFlow.Actions.sln
+
     - name: Test
-      run: dotnet test Plugins2\Configuration\UnitTests\Futile.SpecFlow.Actions.Configuration.UnitTests.csproj --no-build --verbosity normal
+      run: dotnet test Plugins\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Tests\SpecFlow.Actions.Configuration.Tests.csproj --no-build --verbosity normal
