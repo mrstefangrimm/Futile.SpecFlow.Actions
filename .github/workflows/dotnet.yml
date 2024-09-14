@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 env:
-  SOLUTION_FILE_PATH: .
+  SOLUTION_FILE_PATH: Plugins2/Futile.SpecFlow.Actions.sln
   BUILD_CONFIGURATION: Release
 
 jobs:
@@ -25,8 +25,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-   # - name: Restore dependencies
-   #   run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
+    - name: Restore dependencies
+      run: dotnet restore Plugins2/Futile.SpecFlow.Actions.sln
 
     - name: Build
       run: dotnet build --no-restore Plugins2/Futile.SpecFlow.Actions.sln
