@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 env:
-  SOLUTION_FILE_PATH: Plugins2\Futile.SpecFlow.Actions.sln
+  SOLUTION_FILE_PATH: .
   BUILD_CONFIGURATION: Release
 
 jobs:
@@ -29,7 +29,7 @@ jobs:
    #   run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
 
     - name: Build
-      run: dotnet build --no-restore Plugins2\Futile.SpecFlow.Actions.sln
+      run: dotnet build --no-restore Plugins2/Futile.SpecFlow.Actions.sln
 
     - name: Test
-      run: dotnet test Plugins\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Tests\SpecFlow.Actions.Configuration.Tests.csproj --no-build --verbosity normal
+      run: dotnet test Plugins/SpecFlow.Actions.Configuration/SpecFlow.Actions.Configuration.Tests/SpecFlow.Actions.Configuration.Tests.csproj --no-build --verbosity normal
