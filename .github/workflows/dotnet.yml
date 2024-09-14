@@ -25,8 +25,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Restore dependencies
-      run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
+   # - name: Restore dependencies
+   #   run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
 
     - name: Build
       run: dotnet build --no-restore Plugins2\Futile.SpecFlow.Actions.sln
