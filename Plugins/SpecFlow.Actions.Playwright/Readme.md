@@ -12,7 +12,7 @@ Work on [Specflow](https://specflow.org/) has been [discontinued](https://github
   2. Uses `net48` and `net8.0`
   3. Multiple target configurations
 
-An updated example can be found [here](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Actions/PlaywrightExample/).
+Updated examples can be found here: [Futile.SpecFlow-Examples](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Futile).
 
 ### Setup
 

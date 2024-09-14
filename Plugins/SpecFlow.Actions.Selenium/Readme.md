@@ -11,7 +11,7 @@ Work on [Specflow](https://specflow.org/) has been [discontinued](https://github
   1. Includes some bug fixes
   2. Uses `net48` and `net8.0`
 
-An updated example can be found [here](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Actions/SeleniumExample).
+Updated examples can be found here: [Futile.SpecFlow-Examples](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Futile).
 
 > Note: Requires environment variable `FIREFOX_WEBDRIVER_FILE_PATH` which points to a installed [geckodriver](https://github.com/mozilla/geckodriver/releases).
 

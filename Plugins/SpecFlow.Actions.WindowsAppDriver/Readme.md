@@ -10,7 +10,7 @@ Work on [Specflow](https://specflow.org/) has been [discontinued](https://github
  1. Includes some bug fixes
  2. Uses `net48` and `net8.0`
 
-Updated examples can be found here: [WinForms](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/.NET%206/WinForms/), [WPF](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/.NET%206/WPF/).
+Updated examples can be found here: [Futile.SpecFlow-Examples](https://github.com/mrstefangrimm/Futile.SpecFlow-Examples/tree/master/Futile).
 
 ## Prerequisites
 
