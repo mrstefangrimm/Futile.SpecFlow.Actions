@@ -1,17 +1,25 @@
 # This workflow will build a .NET project
 # For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
 
-name: .NET
+name: WindowsAppDriver
 
 on:
   push:
     branches: [ "main" ]
+    paths:
+      - '.github/workflows/dotnet.yaml'
+      - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
+      - 'Plugins/*'
   pull_request:
     branches: [ "main" ]
-
-env:
-  SOLUTION_FILE_PATH: Plugins2/Futile.SpecFlow.Actions.sln
-  BUILD_CONFIGURATION: Release
+    paths:
+      - '.github/workflows/dotnet.yaml'
+      - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
+      - 'Plugins/*'
+      
+#env:
+#  SOLUTION_FILE_PATH: Plugins2\Futile.SpecFlow.Actions.sln
+#  BUILD_CONFIGURATION: Release
 
 jobs:
   build:
@@ -25,11 +33,9 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Restore dependencies
-      run: dotnet restore Plugins2/Futile.SpecFlow.Actions.sln
-
+   # - name: Restore dependencies
+   #   run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
     - name: Build
-      run: dotnet build --no-restore Plugins2/Futile.SpecFlow.Actions.sln
-
+      run: dotnet build Plugins/SpecFlow.Actions.WindowsAppDriver/SpecFlow.Actions.WindowsAppDriver.sln
     - name: Test
-      run: dotnet test Plugins/SpecFlow.Actions.Configuration/SpecFlow.Actions.Configuration.Tests/SpecFlow.Actions.Configuration.Tests.csproj --no-build --verbosity normal
+      run: dotnet test Plugins\SpecFlow.Actions.WindowsAppDriver\SpecFlow.Actions.WindowsAppDriver.Tests\SpecFlow.Actions.WindowsAppDriver.Tests.csproj
