@@ -5,13 +5,13 @@ name: WindowsAppDriver
 
 on:
   push:
-    branches: [ "main" ]
+  #  branches: [ "main" ]
     paths:
       - '.github/workflows/dotnet.yaml'
       - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
       - 'Plugins/*'
   pull_request:
-    branches: [ "main" ]
+  #  branches: [ "main" ]
     paths:
       - '.github/workflows/dotnet.yaml'
       - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
