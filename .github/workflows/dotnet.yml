@@ -32,6 +32,7 @@ jobs:
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
+
    # - name: Restore dependencies
    #   run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
     - name: Build
