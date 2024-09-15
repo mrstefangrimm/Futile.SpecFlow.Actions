@@ -6,6 +6,8 @@ name: WindowsAppDriver
 on:
   push:
     branches: [ "main" ]
+    paths:
+    - 'Plugins/*'
   pull_request:
     branches: [ "main" ]
     paths:
