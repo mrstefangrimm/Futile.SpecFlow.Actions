@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-    - 'Plugins/*'
+    - 'Plugins/**'
   pull_request:
     branches: [ "main" ]
     paths:
