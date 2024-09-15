@@ -6,10 +6,6 @@ name: WindowsAppDriver
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - '.github/workflows/dotnet.yaml'
-      - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
-      - 'Plugins/*'
   pull_request:
     branches: [ "main" ]
     paths:
@@ -24,16 +20,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v3
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
         dotnet-version: 8.0.x
-
-   # - name: Restore dependencies
-   #   run: dotnet restore Plugins2\Futile.SpecFlow.Actions.sln
     - name: Build
       run: dotnet build Plugins/SpecFlow.Actions.WindowsAppDriver/SpecFlow.Actions.WindowsAppDriver.sln
     - name: Test
