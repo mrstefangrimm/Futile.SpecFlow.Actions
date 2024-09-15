@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" ]
     paths:
-    - 'Plugins/**'
+    - 'Plugins/*'
   pull_request:
     branches: [ "main" ]
     paths:
@@ -29,6 +29,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Build
-      run: dotnet build Plugins/SpecFlow.Actions.WindowsAppDriver/SpecFlow.Actions.WindowsAppDriver.sln
+      run: dotnet build SpecFlow.Actions.WindowsAppDriver/SpecFlow.Actions.WindowsAppDriver.sln
     - name: Test
       run: dotnet test Plugins\SpecFlow.Actions.WindowsAppDriver\SpecFlow.Actions.WindowsAppDriver.Tests\SpecFlow.Actions.WindowsAppDriver.Tests.csproj
