@@ -11,7 +11,7 @@ on:
       - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
       - 'Plugins/*'
   pull_request:
-  #  branches: [ "main" ]
+    branches: [ "add_builds2" ]
     paths:
       - '.github/workflows/dotnet.yaml'
       - 'Plugins/SpecFlow.Actions.WindowsAppDriver/**'
