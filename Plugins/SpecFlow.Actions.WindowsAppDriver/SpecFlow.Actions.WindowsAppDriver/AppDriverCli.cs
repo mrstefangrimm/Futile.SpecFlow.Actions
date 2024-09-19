@@ -37,11 +37,14 @@ namespace SpecFlow.Actions.WindowsAppDriver
         /// </summary>
         public void Dispose()
         {
-            if ( _isDisposed)
+            if (_isDisposed)
             {
                 return;
             }
-            _appDriverProcess?.Kill();
+            if (_appDriverProcess != null && !_appDriverProcess.HasExited)
+            {
+                _appDriverProcess?.Kill();
+            }
 
             _isDisposed = true;
         }
