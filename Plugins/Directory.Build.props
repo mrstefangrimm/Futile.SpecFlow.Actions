@@ -9,7 +9,7 @@
     <SpecFlow_Authors>mrstefangrimm</SpecFlow_Authors>
     <SpecFlow_Owners></SpecFlow_Owners>
 
-    <SpecFlow_Actions_Version>0.1.350.6</SpecFlow_Actions_Version>
+    <SpecFlow_Actions_Version>0.1.350.7</SpecFlow_Actions_Version>
   </PropertyGroup>
 
   <ItemGroup>

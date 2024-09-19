@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net48</TargetFrameworks>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
     <NuspecFile>$(MSBuildThisFileDirectory)SpecFlow.Actions.Configuration.Generation.nuspec</NuspecFile>
     <AssemblyName>SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin</AssemblyName>
   </PropertyGroup>
