@@ -1,11 +1,11 @@
 <Project>
 
   <PropertyGroup>
-    <VersionPrefix>0.1.350.6</VersionPrefix>
-    <FlaUIVersionPrefix>1.0.2</FlaUIVersionPrefix>
+    <VersionPrefix>0.1.350.7</VersionPrefix>
+    <FlaUIVersionPrefix>1.0.3</FlaUIVersionPrefix>
     <me>mrstefangrimm</me>
 
-    <NetCoreVersion>net8.0</NetCoreVersion>
+    <NetCoreVersion>net6.0</NetCoreVersion>
     <NetFrameworkVersion>net48</NetFrameworkVersion>
 
     <!-- vulnerable packages -->

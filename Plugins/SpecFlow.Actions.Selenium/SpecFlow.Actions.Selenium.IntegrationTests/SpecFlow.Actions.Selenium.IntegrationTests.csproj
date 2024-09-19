@@ -3,7 +3,7 @@
   <Import Project="..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\Build\Futile.SpecFlow.Actions.Configuration.props" />
 
   <PropertyGroup>
-    <TargetFrameworks>net8.0;net48</TargetFrameworks>
+    <TargetFrameworks>net6.0;net48</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -45,7 +45,7 @@
   </ItemGroup>
 
   <PropertyGroup>
-    <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net8.0</_SpecFlow_GeneratorPlugin>
+    <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' == 'Core'">net6.0</_SpecFlow_GeneratorPlugin>
     <_SpecFlow_GeneratorPlugin Condition=" '$(MSBuildRuntimeType)' != 'Core'">net48</_SpecFlow_GeneratorPlugin>
     <_SpecFlow_GeneratorPluginPath>$(MSBuildThisFileDirectory)..\..\SpecFlow.Actions.Configuration\SpecFlow.Actions.Configuration.Generation\bin\$(Configuration)\$(_SpecFlow_GeneratorPlugin)\SpecFlow.Actions.Configuration.Generation.SpecFlowPlugin.dll</_SpecFlow_GeneratorPluginPath>
   </PropertyGroup>
