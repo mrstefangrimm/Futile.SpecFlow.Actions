@@ -5,7 +5,7 @@ namespace Example.PageObjects
     public class CalculatorElementLocators
     {
         //The URL of the calculator to be opened in the browser
-        private protected const string CalculatorUrl = "https://specflowoss.github.io/Calculator-Demo/Calculator.html";
+        private protected const string CalculatorUrl = "https://futile-calculator.netlify.app/";
 
         //Finding elements by ID
         private protected By FirstNumberFieldLocator => By.Id("first-number");

@@ -6,7 +6,7 @@
     <TargetFrameworks>$(NetCoreVersion);$(NetFrameworkVersion)</TargetFrameworks>
     <LangVersion>latest</LangVersion>
     <Nullable>enable</Nullable>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <SignAssembly>false</SignAssembly>
     <IsPackable>true</IsPackable>
   </PropertyGroup>

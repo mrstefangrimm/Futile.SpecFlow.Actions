@@ -6,7 +6,7 @@ This SpecFlow.Action will help you use [FlaUI](https://github.com/FlaUI/FlaUI/) 
 
 ## Futile?
 
-Work on [Specflow](https://specflow.org/) has been [discontinued](https://github.com/SpecFlowOSS/SpecFlow/issues/2719) and the successor is [reqnroll](https://reqnroll.net/) (status May 2024). This nuget package is an addition to a [fork](https://github.com/mrstefangrimm/Futile.SpecFlow.Actions).
+Work on [Specflow](https://specflow.org/) has been [discontinued](https://github.com/SpecFlowOSS/SpecFlow/issues/2719) and the successor is [reqnroll](https://reqnroll.net/). This nuget package is an addition to a [fork](https://github.com/mrstefangrimm/Futile.SpecFlow.Actions).
 
 ### Included Features
 

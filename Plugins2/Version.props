@@ -1,17 +1,17 @@
 <Project>
 
   <PropertyGroup>
-    <VersionPrefix>0.1.350.7</VersionPrefix>
-    <FlaUIVersionPrefix>1.0.3</FlaUIVersionPrefix>
+    <VersionPrefix>0.1.350.9</VersionPrefix>
+    <FlaUIVersionPrefix>1.0.4</FlaUIVersionPrefix>
     <me>mrstefangrimm</me>
 
-    <NetCoreVersion>net6.0</NetCoreVersion>
-    <NetFrameworkVersion>net48</NetFrameworkVersion>
+    <NetCoreVersion>net8.0</NetCoreVersion>
+    <NetFrameworkVersion>net481</NetFrameworkVersion>
 
     <!-- vulnerable packages -->
     <SystemTextRegularExpressionsVersion>4.3.1</SystemTextRegularExpressionsVersion>
-    <SystemTextJsonVersion>8.0.4</SystemTextJsonVersion>
-    <NewtonsoftJsonVersion>13.0.3</NewtonsoftJsonVersion>
+    <SystemTextJsonVersion>10.0.3</SystemTextJsonVersion>
+    <NewtonsoftJsonVersion>13.0.4</NewtonsoftJsonVersion>
 
     <SpecflowVersion>3.9.74</SpecflowVersion>
 
@@ -20,8 +20,8 @@
     <MicrosoftExtensionsConfigurationJsonVersion>8.0.0</MicrosoftExtensionsConfigurationJsonVersion>
 
     <!-- FlaUI -->
-    <FlaUIVersion>4.0.0</FlaUIVersion>
-    <SystemDrawingCommonVersion>8.0.8</SystemDrawingCommonVersion>
+    <FlaUIVersion>5.0.0</FlaUIVersion>
+    <SystemDrawingCommonVersion>10.0.3</SystemDrawingCommonVersion>
 
     <!-- Playwright -->
     <MicrosoftPlaywrightVersion>1.46.0</MicrosoftPlaywrightVersion>
@@ -38,11 +38,11 @@
     <AppiumWebDriverVersion>4.4.5</AppiumWebDriverVersion>
 
     <!-- Test Frameworks -->
-    <MicrosoftNETTestSdkVersion>17.11.1</MicrosoftNETTestSdkVersion>
-    <FluentAssertionsVersion>6.12.1</FluentAssertionsVersion>
+    <MicrosoftNETTestSdkVersion>18.3.0</MicrosoftNETTestSdkVersion>
+    <FluentAssertionsVersion>8.8.0</FluentAssertionsVersion>
     <MoqVersion>4.20.70</MoqVersion>
     <XunitVersion>2.9.0</XunitVersion>
-    <XunitRunnerVisualstudioVersion>2.8.2</XunitRunnerVisualstudioVersion>
+    <XunitRunnerVisualstudioVersion>3.1.5</XunitRunnerVisualstudioVersion>
 
   </PropertyGroup>
 

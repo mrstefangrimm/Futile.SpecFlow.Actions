@@ -9,13 +9,13 @@
     <SpecFlow_Authors>mrstefangrimm</SpecFlow_Authors>
     <SpecFlow_Owners></SpecFlow_Owners>
 
-    <SpecFlow_Actions_Version>0.1.350.7</SpecFlow_Actions_Version>
+    <SpecFlow_Actions_Version>0.1.350.9</SpecFlow_Actions_Version>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Nerdbank.GitVersioning" Version="3.4.255" PrivateAssets="all" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
+    <PackageReference Include="Nerdbank.GitVersioning" Version="3.9.50" PrivateAssets="all" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
     <None Include="$(MSBuildThisFileDirectory)/LICENSE" Pack="true" PackagePath="" Condition="'$(MSBuildProjectExtension)' != '.dcproj'"/>
-    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.2" Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" Condition="'$(MSBuildProjectExtension)' != '.dcproj'">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
